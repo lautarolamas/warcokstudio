@@ -1,27 +1,37 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <div className="bg-black text-white min-h-screen">
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center">
-        <Link href="/" className="text-sm font-light tracking-wider">
-          WARKOC STUDIO
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
+        <Link href="/" className="text-sm font-medium tracking-wider">
+          Warcok Estudio
         </Link>
         <div className="flex items-center space-x-8">
-          <Link href="/work" className="text-sm font-light hover:opacity-70 transition-opacity">
+          <Link
+            href="/work"
+            className="text-sm font-medium hover:opacity-70 transition-opacity"
+          >
             WORK
           </Link>
-          <Link href="/about" className="text-sm font-light hover:opacity-70 transition-opacity">
+          <Link
+            href="/about"
+            className="text-sm font-medium hover:opacity-70 transition-opacity border-b border-white"
+          >
             ABOUT
           </Link>
-          <Link href="/contact" className="text-sm font-light hover:opacity-70 transition-opacity">
+          <Link
+            href="/contact"
+            className="text-sm font-medium hover:opacity-70 transition-opacity"
+          >
             CONTACT
           </Link>
         </div>
-        <div className="text-sm font-light">©2025</div>
+        <div className="w-[100px]"></div>
       </header>
 
       <main>
@@ -34,6 +44,22 @@ export default function AboutPage() {
               className="mb-16"
             >
               <h1 className="text-4xl md:text-5xl font-light mb-10">About</h1>
+
+              <div className="flex flex-col items-center mb-16">
+                <div className="w-64 h-64 rounded-full overflow-hidden mb-8">
+                  <Image
+                    src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=2662&auto=format&fit=crop"
+                    alt="Profile picture"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h2 className="text-2xl font-light">Nombre Apellido</h2>
+                <p className="text-neutral-400 mt-2">
+                  Founder & Creative Director
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -43,16 +69,20 @@ export default function AboutPage() {
               className="mb-16 text-lg leading-relaxed"
             >
               <p className="mb-6">
-                WARKOC STUDIO es un estudio creativo multidisciplinar especializado en branding, diseño y desarrollo
-                digital. Creamos experiencias visuales únicas que conectan marcas con su audiencia.
+                Warcok Estudio es un estudio creativo multidisciplinar
+                especializado en branding, diseño y desarrollo digital. Creamos
+                experiencias visuales únicas que conectan marcas con su
+                audiencia.
               </p>
               <p className="mb-6">
-                Nuestro enfoque combina estrategia, creatividad y tecnología para desarrollar soluciones que no solo son
-                estéticamente atractivas, sino también efectivas y funcionales.
+                Nuestro enfoque combina estrategia, creatividad y tecnología
+                para desarrollar soluciones que no solo son estéticamente
+                atractivas, sino también efectivas y funcionales.
               </p>
               <p>
-                Trabajamos con marcas que valoran el diseño como una herramienta estratégica para diferenciarse y
-                conectar con su audiencia de manera significativa.
+                Trabajamos con marcas que valoran el diseño como una herramienta
+                estratégica para diferenciarse y conectar con su audiencia de
+                manera significativa.
               </p>
             </motion.div>
 
@@ -101,7 +131,8 @@ export default function AboutPage() {
             >
               <h2 className="text-2xl font-light mb-6">Contacto</h2>
               <p className="text-neutral-400 mb-4">
-                Si estás interesado en trabajar con nosotros, no dudes en contactarnos.
+                Si estás interesado en trabajar con nosotros, no dudes en
+                contactarnos.
               </p>
               <Link
                 href="/contact"
@@ -116,20 +147,31 @@ export default function AboutPage() {
 
       <footer className="py-10 px-6 border-t border-neutral-900">
         <div className="flex justify-between items-center">
-          <p className="text-sm text-neutral-500">© {new Date().getFullYear()} Warkoc Studio</p>
+          <p className="text-sm text-neutral-500">
+            © {new Date().getFullYear()} Warcok Estudio
+          </p>
           <div className="flex space-x-6">
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
+            <Link
+              href="#"
+              className="text-sm text-neutral-500 hover:text-white transition-colors"
+            >
               Instagram
             </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
+            <Link
+              href="#"
+              className="text-sm text-neutral-500 hover:text-white transition-colors"
+            >
               LinkedIn
             </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
+            <Link
+              href="#"
+              className="text-sm text-neutral-500 hover:text-white transition-colors"
+            >
               Behance
             </Link>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

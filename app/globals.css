@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground: 255, 255, 255;
-  --background: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
 }
 
 body {
-  color: rgb(var(--foreground));
-  background: rgb(var(--background));
-  font-feature-settings: "ss01" on, "ss02" on, "ss03" on, "ss04" on;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03", "cv04";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +22,14 @@ html {
 @layer base {
   * {
     @apply border-neutral-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-light tracking-tight;
+  }
+  
+  p {
+    @apply font-normal;
   }
 }
 

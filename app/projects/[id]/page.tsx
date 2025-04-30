@@ -1,271 +1,318 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+
+const projectsData = {
+  1: {
+    title: "Gaston: Lighting under a new light",
+    category: "REBRANDING",
+    description:
+      "Una nueva perspectiva en iluminación que combina diseño contemporáneo con funcionalidad excepcional.",
+    client: "Gaston Lighting Co.",
+    year: "2024",
+    services: [
+      "Branding",
+      "Diseño de Packaging",
+      "Dirección de Arte",
+      "Fotografía",
+    ],
+    mainImage:
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=2940&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?q=80&w=2940&auto=format&fit=crop",
+        size: "large",
+        caption: "Diseño de empaque premium",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=2887&auto=format&fit=crop",
+        size: "small",
+        caption: "Detalles del producto",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=2787&auto=format&fit=crop",
+        size: "medium",
+        caption: "Ambiente y contexto",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=2787&auto=format&fit=crop",
+        size: "small",
+        caption: "Proceso creativo",
+      },
+    ],
+    color: "bg-pink-400",
+  },
+  2: {
+    title: "Phylis: Sustainable packaging",
+    category: "REBRANDING",
+    description:
+      "Redefiniendo el packaging sostenible con un enfoque en la belleza y la responsabilidad ambiental.",
+    client: "Phylis Eco Solutions",
+    year: "2024",
+    services: ["Diseño Sostenible", "Branding", "Estrategia", "Packaging"],
+    mainImage:
+      "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=2787&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1585435421671-0c16737a6f97?q=80&w=2940&auto=format&fit=crop",
+        size: "large",
+        caption: "Materiales sostenibles",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1597760727511-fe0b0f0e0ea8?q=80&w=2940&auto=format&fit=crop",
+        size: "small",
+        caption: "Proceso de producción",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Impacto ambiental",
+      },
+    ],
+    color: "bg-green-200",
+  },
+  3: {
+    title: "Vintage Everything: Fashion Hunters",
+    category: "REBRANDING",
+    description:
+      "Una revolucionaria plataforma de moda vintage que conecta coleccionistas con piezas únicas.",
+    client: "Vintage Everything Co.",
+    year: "2024",
+    services: ["Branding", "Diseño Web", "Fotografía", "Estrategia Digital"],
+    mainImage:
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2938&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2940&auto=format&fit=crop",
+        size: "large",
+        caption: "Campaña fotográfica",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Concepto de marca",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=2785&auto=format&fit=crop",
+        size: "small",
+        caption: "Detalles de producto",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Experiencia de compra",
+      },
+    ],
+    color: "bg-red-400",
+  },
+  4: {
+    title: "Schlong: The subtle art of fine living",
+    category: "REBRANDING",
+    description:
+      "Redefiniendo el lujo moderno a través del diseño y la experiencia sensorial.",
+    client: "Schlong Lifestyle",
+    year: "2024",
+    services: [
+      "Branding",
+      "Diseño Editorial",
+      "Dirección de Arte",
+      "Packaging",
+    ],
+    mainImage:
+      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=2940&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=2787&auto=format&fit=crop",
+        size: "large",
+        caption: "Diseño editorial",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2940&auto=format&fit=crop",
+        size: "small",
+        caption: "Packaging premium",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Experiencia de marca",
+      },
+    ],
+    color: "bg-stone-300",
+  },
+  5: {
+    title: "LeBlink: Skincare for the modern age",
+    category: "REBRANDING",
+    description:
+      "Una marca de skincare que fusiona ciencia avanzada con ingredientes naturales.",
+    client: "LeBlink Beauty",
+    year: "2024",
+    services: ["Branding", "Packaging", "Fotografía", "Estrategia Digital"],
+    mainImage:
+      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?q=80&w=2787&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2940&auto=format&fit=crop",
+        size: "large",
+        caption: "Línea de productos",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1531895861208-8504b98fe814?q=80&w=2940&auto=format&fit=crop",
+        size: "small",
+        caption: "Ingredientes naturales",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Experiencia de usuario",
+      },
+    ],
+    color: "bg-blue-200",
+  },
+  6: {
+    title: "Sensaya: Beauty for everyone",
+    category: "REBRANDING",
+    description:
+      "Una marca de belleza inclusiva que celebra la diversidad y la autenticidad.",
+    client: "Sensaya Cosmetics",
+    year: "2024",
+    services: ["Branding", "Packaging", "Campaña Digital", "Fotografía"],
+    mainImage:
+      "https://images.unsplash.com/photo-1512207846876-bb54ef5056fe?q=80&w=2787&auto=format&fit=crop",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2940&auto=format&fit=crop",
+        size: "large",
+        caption: "Campaña de inclusividad",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2940&auto=format&fit=crop",
+        size: "medium",
+        caption: "Diversidad en acción",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2940&auto=format&fit=crop",
+        size: "small",
+        caption: "Productos inclusivos",
+      },
+    ],
+    color: "bg-indigo-900",
+  },
+};
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
-  const [project, setProject] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulando carga de datos del proyecto
-    const projects = [
-      {
-        id: "1",
-        title: "Gaston: Lighting under a new light",
-        description: "Rediseño de marca para una empresa de iluminación premium",
-        fullDescription:
-          "Gaston es una marca de iluminación premium que necesitaba un rediseño completo para reflejar la calidad y elegancia de sus productos. Desarrollamos una identidad visual que combina elementos modernos con un toque de sofisticación clásica.",
-        image: "/placeholder.svg?height=600&width=600&text=Gaston",
-        color: "bg-pink-400",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=Gaston+1",
-          "/placeholder.svg?height=800&width=1200&text=Gaston+2",
-          "/placeholder.svg?height=800&width=1200&text=Gaston+3",
-        ],
-        year: "2024",
-        client: "Gaston Lighting",
-        services: ["Branding", "Diseño de Packaging", "Dirección de Arte"],
-      },
-      {
-        id: "2",
-        title: "Phylis: Sustainable packaging",
-        description: "Diseño de packaging sostenible para productos ecológicos",
-        fullDescription:
-          "Phylis es una marca comprometida con la sostenibilidad que necesitaba un packaging que reflejara sus valores. Creamos un sistema de packaging minimalista, funcional y completamente sostenible que reduce el impacto ambiental sin comprometer la estética.",
-        image: "/placeholder.svg?height=600&width=600&text=Phylis",
-        color: "bg-green-200",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=Phylis+1",
-          "/placeholder.svg?height=800&width=1200&text=Phylis+2",
-          "/placeholder.svg?height=800&width=1200&text=Phylis+3",
-        ],
-        year: "2023",
-        client: "Phylis Eco Products",
-        services: ["Diseño de Packaging", "Estrategia de Marca", "Sostenibilidad"],
-      },
-      {
-        id: "3",
-        title: "Vintage Everything: Fashion Hunters",
-        description: "Identidad visual para tienda de moda vintage",
-        fullDescription:
-          "Vintage Everything es una tienda especializada en moda vintage de alta calidad. Desarrollamos una identidad visual que captura la esencia nostálgica de lo vintage pero con un enfoque contemporáneo, creando un equilibrio perfecto entre lo retro y lo moderno.",
-        image: "/placeholder.svg?height=600&width=600&text=Vintage",
-        color: "bg-red-400",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=Vintage+1",
-          "/placeholder.svg?height=800&width=1200&text=Vintage+2",
-          "/placeholder.svg?height=800&width=1200&text=Vintage+3",
-        ],
-        year: "2023",
-        client: "Vintage Everything",
-        services: ["Branding", "Diseño Gráfico", "Estrategia de Comunicación"],
-      },
-      {
-        id: "4",
-        title: "Schlong: The subtle art of fine living",
-        description: "Branding para revista de estilo de vida premium",
-        fullDescription:
-          "Schlong es una revista de estilo de vida premium que celebra el arte de vivir bien. Creamos una identidad visual sofisticada y minimalista que refleja la elegancia y exclusividad de la publicación, con un sistema tipográfico distintivo y una paleta de colores refinada.",
-        image: "/placeholder.svg?height=600&width=600&text=Schlong",
-        color: "bg-stone-300",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=Schlong+1",
-          "/placeholder.svg?height=800&width=1200&text=Schlong+2",
-          "/placeholder.svg?height=800&width=1200&text=Schlong+3",
-        ],
-        year: "2022",
-        client: "Schlong Magazine",
-        services: ["Diseño Editorial", "Dirección de Arte", "Tipografía"],
-      },
-      {
-        id: "5",
-        title: "LeBlink: Skincare for the modern age",
-        description: "Identidad visual para marca de cuidado de la piel",
-        fullDescription:
-          "LeBlink es una marca innovadora de cuidado de la piel que combina ciencia avanzada con ingredientes naturales. Desarrollamos una identidad visual que comunica transparencia, pureza y eficacia, con un enfoque en la experiencia del usuario y la claridad de la comunicación.",
-        image: "/placeholder.svg?height=600&width=600&text=LeBlink",
-        color: "bg-blue-200",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=LeBlink+1",
-          "/placeholder.svg?height=800&width=1200&text=LeBlink+2",
-          "/placeholder.svg?height=800&width=1200&text=LeBlink+3",
-        ],
-        year: "2022",
-        client: "LeBlink Skincare",
-        services: ["Branding", "Packaging", "Estrategia Digital"],
-      },
-      {
-        id: "6",
-        title: "Sensaya: Beauty for everyone",
-        description: "Branding inclusivo para marca de belleza",
-        fullDescription:
-          "Sensaya es una marca de belleza comprometida con la inclusividad y la diversidad. Creamos una identidad visual que celebra todas las formas de belleza, con un sistema flexible que se adapta a diferentes audiencias manteniendo una coherencia visual distintiva.",
-        image: "/placeholder.svg?height=600&width=600&text=Sensaya",
-        color: "bg-indigo-900",
-        gallery: [
-          "/placeholder.svg?height=800&width=1200&text=Sensaya+1",
-          "/placeholder.svg?height=800&width=1200&text=Sensaya+2",
-          "/placeholder.svg?height=800&width=1200&text=Sensaya+3",
-        ],
-        year: "2021",
-        client: "Sensaya Beauty",
-        services: ["Branding", "Estrategia de Marca", "Dirección Creativa"],
-      },
-    ]
-
-    const foundProject = projects.find((p) => p.id === params.id)
-
-    setTimeout(() => {
-      setProject(foundProject || null)
-      setLoading(false)
-    }, 800)
-  }, [params.id])
-
-  if (loading) {
-    return (
-      <div className="h-screen w-full flex items-center justify-center bg-black text-white">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-2xl font-light"
-        >
-          Cargando...
-        </motion.div>
-      </div>
-    )
-  }
+  const project = projectsData[params.id as keyof typeof projectsData];
 
   if (!project) {
-    return (
-      <div className="h-screen w-full flex items-center justify-center bg-black text-white">
-        <div className="text-center">
-          <h1 className="text-2xl font-light mb-4">Proyecto no encontrado</h1>
-          <Link href="/" className="border-b border-white pb-1">
-            Volver al inicio
-          </Link>
-        </div>
-      </div>
-    )
+    return <div>Proyecto no encontrado</div>;
   }
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center">
-        <Link href="/" className="text-sm font-light tracking-wider">
-          WARKOC STUDIO
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
+        <Link href="/" className="text-sm font-medium tracking-wider">
+          Warcok Estudio
         </Link>
-        <div className="flex items-center space-x-8">
-          <Link href="/work" className="text-sm font-light hover:opacity-70 transition-opacity">
-            WORK
-          </Link>
-          <Link href="/about" className="text-sm font-light hover:opacity-70 transition-opacity">
-            ABOUT
-          </Link>
-          <Link href="/contact" className="text-sm font-light hover:opacity-70 transition-opacity">
-            CONTACT
-          </Link>
-        </div>
-        <div className="text-sm font-light">©2025</div>
+        <Link
+          href="/"
+          className="text-sm font-medium hover:opacity-70 transition-opacity"
+        >
+          ← VOLVER
+        </Link>
       </header>
 
-      <main className="pt-32 pb-20">
-        <div className="container mx-auto max-w-6xl px-6">
-          <Link href="/" className="inline-flex items-center text-neutral-400 hover:text-white mb-10 transition-colors">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver
-          </Link>
-
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
-          >
-            <h1 className="text-5xl md:text-6xl font-light mb-6">{project.title}</h1>
-            <p className="text-xl text-neutral-400 max-w-2xl">{project.description}</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mb-20"
-          >
-            <Image
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
-              width={1200}
-              height={800}
-              className="w-full h-auto"
-            />
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
-            <div>
-              <h3 className="text-xl font-light mb-2">Cliente</h3>
-              <p className="text-neutral-400">{project.client}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-light mb-2">Año</h3>
-              <p className="text-neutral-400">{project.year}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-light mb-2">Servicios</h3>
-              <ul className="text-neutral-400">
-                {project.services.map((service: string, index: number) => (
-                  <li key={index}>{service}</li>
-                ))}
-              </ul>
-            </div>
+      <main className="pt-32 pb-20 px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto"
+        >
+          <div className="mb-16">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl font-light mb-4"
+            >
+              {project.title}
+            </motion.h1>
+            <p className="text-neutral-400 text-lg md:text-xl max-w-3xl">
+              {project.description}
+            </p>
           </div>
 
-          <div className="mb-20">
-            <p className="text-lg max-w-3xl">{project.fullDescription}</p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8">
-            {project.gallery.map((image: string, index: number) => (
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+            <div className="md:col-span-8">
               <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="aspect-[16/9] relative rounded-2xl overflow-hidden"
               >
                 <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`${project.title} - Imagen ${index + 1}`}
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto"
+                  src={project.mainImage}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
                 />
+              </motion.div>
+            </div>
+            <div className="md:col-span-4 flex flex-col justify-between">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-sm text-neutral-400 mb-2">CLIENTE</h3>
+                  <p className="text-lg">{project.client}</p>
+                </div>
+                <div>
+                  <h3 className="text-sm text-neutral-400 mb-2">AÑO</h3>
+                  <p className="text-lg">{project.year}</p>
+                </div>
+                <div>
+                  <h3 className="text-sm text-neutral-400 mb-2">SERVICIOS</h3>
+                  <ul className="space-y-1">
+                    {project.services.map((service) => (
+                      <li key={service} className="text-lg">
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            {project.images.map((image, index) => (
+              <motion.div
+                key={image.url}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
+                className={`relative rounded-2xl overflow-hidden ${
+                  image.size === "large"
+                    ? "md:col-span-8 aspect-[16/9]"
+                    : image.size === "medium"
+                    ? "md:col-span-6 aspect-square"
+                    : "md:col-span-4 aspect-square"
+                }`}
+              >
+                <Image
+                  src={image.url}
+                  alt={image.caption}
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                  <p className="text-sm text-white">{image.caption}</p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </main>
-
-      <footer className="py-10 px-6 border-t border-neutral-900">
-        <div className="flex justify-between items-center">
-          <p className="text-sm text-neutral-500">© {new Date().getFullYear()} Warkoc Studio</p>
-          <div className="flex space-x-6">
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
-              Instagram
-            </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
-              LinkedIn
-            </Link>
-            <Link href="#" className="text-sm text-neutral-500 hover:text-white transition-colors">
-              Behance
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
