@@ -3,36 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Header } from "@/components/header";
 
 export default function AboutPage() {
   return (
     <div className="bg-black text-white min-h-screen">
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
-        <Link href="/" className="text-sm font-medium tracking-wider">
-          Warcok Estudio
-        </Link>
-        <div className="flex items-center space-x-8">
-          <Link
-            href="/work"
-            className="text-sm font-medium hover:opacity-70 transition-opacity"
-          >
-            WORK
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-medium hover:opacity-70 transition-opacity border-b border-white"
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium hover:opacity-70 transition-opacity"
-          >
-            CONTACT
-          </Link>
-        </div>
-        <div className="w-[100px]"></div>
-      </header>
+      <Header />
 
       <main>
         <section className="pt-32 pb-20 px-6">
@@ -43,19 +19,21 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="mb-16"
             >
-              <h1 className="text-4xl md:text-5xl font-light mb-10">About</h1>
+              <h1 className="text-4xl md:text-5xl font-light mb-10">
+                Sobre mi
+              </h1>
 
               <div className="flex flex-col items-center mb-16">
                 <div className="w-64 h-64 rounded-full overflow-hidden mb-8">
                   <Image
-                    src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=2662&auto=format&fit=crop"
+                    src="/about-me.jpeg"
                     alt="Profile picture"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h2 className="text-2xl font-light">Nombre Apellido</h2>
+                <h2 className="text-2xl font-light">Belen Warcok</h2>
                 <p className="text-neutral-400 mt-2">
                   Founder & Creative Director
                 </p>

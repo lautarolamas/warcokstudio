@@ -8,12 +8,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Header } from "@/components/header";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     message: "",
+    companyName: "",
+    website: "",
+    phone: "",
+    country: "",
+    howDidYouHear: "",
+    investmentRange: "",
     submitted: false,
     loading: false,
   });
@@ -22,44 +29,44 @@ export default function ContactPage() {
     e.preventDefault();
     setFormState((prev) => ({ ...prev, loading: true }));
 
-    // Simulando envío del formulario
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Enviar los datos al endpoint de contacto
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formState.name,
+        email: formState.email,
+        projectDetails: formState.message,
+        companyName: formState.companyName,
+        website: formState.website,
+        phone: formState.phone,
+        country: formState.country,
+        howDidYouHear: formState.howDidYouHear,
+        investmentRange: formState.investmentRange,
+      }),
+    });
 
-    setFormState((prev) => ({
-      ...prev,
-      submitted: true,
-      loading: false,
-    }));
+    if (res.ok) {
+      setFormState((prev) => ({
+        ...prev,
+        submitted: true,
+        loading: false,
+      }));
+      console.log("¡Mensaje enviado correctamente!");
+    } else {
+      setFormState((prev) => ({
+        ...prev,
+        loading: false,
+      }));
+      const errorData = await res.json();
+      console.log("Error al enviar email:", errorData);
+      alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
+    }
   };
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
-        <Link href="/" className="text-sm font-medium tracking-wider">
-          Warcok Estudio
-        </Link>
-        <div className="flex items-center space-x-8">
-          <Link
-            href="/work"
-            className="text-sm font-medium hover:opacity-70 transition-opacity"
-          >
-            WORK
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-medium hover:opacity-70 transition-opacity"
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium hover:opacity-70 transition-opacity border-b border-white"
-          >
-            CONTACT
-          </Link>
-        </div>
-        <div className="w-[100px]"></div>
-      </header>
+      <Header />
 
       <main>
         <section className="pt-32 pb-20 px-6">
@@ -172,6 +179,36 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
+                        <Label htmlFor="companyName">Empresa</Label>
+                        <Input
+                          id="companyName"
+                          value={formState.companyName}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              companyName: e.target.value,
+                            }))
+                          }
+                          placeholder="Nombre de la empresa"
+                          className="bg-transparent border-neutral-800 focus:border-white"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="website">Sitio web / Red social</Label>
+                        <Input
+                          id="website"
+                          value={formState.website}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              website: e.target.value,
+                            }))
+                          }
+                          placeholder="www.tuweb.com / @instagram"
+                          className="bg-transparent border-neutral-800 focus:border-white"
+                        />
+                      </div>
+                      <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
@@ -185,6 +222,36 @@ export default function ContactPage() {
                           }
                           placeholder="tu@email.com"
                           required
+                          className="bg-transparent border-neutral-800 focus:border-white"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Teléfono</Label>
+                        <Input
+                          id="phone"
+                          value={formState.phone}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              phone: e.target.value,
+                            }))
+                          }
+                          placeholder="+34..."
+                          className="bg-transparent border-neutral-800 focus:border-white"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="country">País</Label>
+                        <Input
+                          id="country"
+                          value={formState.country}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              country: e.target.value,
+                            }))
+                          }
+                          placeholder="Argentina, España, ..."
                           className="bg-transparent border-neutral-800 focus:border-white"
                         />
                       </div>
@@ -203,6 +270,50 @@ export default function ContactPage() {
                           required
                           className="min-h-[150px] bg-transparent border-neutral-800 focus:border-white"
                         />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="howDidYouHear">
+                          ¿Cómo nos conociste?
+                        </Label>
+                        <select
+                          id="howDidYouHear"
+                          value={formState.howDidYouHear}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              howDidYouHear: e.target.value,
+                            }))
+                          }
+                          className="bg-transparent border-neutral-800 focus:border-white w-full py-2 px-3 rounded"
+                        >
+                          <option value="">Selecciona una opción</option>
+                          <option value="referral">Recomendación</option>
+                          <option value="google">Google</option>
+                          <option value="social">Redes sociales</option>
+                          <option value="other">Otro</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="investmentRange">
+                          Rango de inversión
+                        </Label>
+                        <select
+                          id="investmentRange"
+                          value={formState.investmentRange}
+                          onChange={(e) =>
+                            setFormState((prev) => ({
+                              ...prev,
+                              investmentRange: e.target.value,
+                            }))
+                          }
+                          className="bg-transparent border-neutral-800 focus:border-white w-full py-2 px-3 rounded"
+                        >
+                          <option value="">Selecciona un rango</option>
+                          <option value="small">$1,000 - $5,000</option>
+                          <option value="medium">$5,000 - $10,000</option>
+                          <option value="large">$10,000 - $25,000</option>
+                          <option value="enterprise">$25,000+</option>
+                        </select>
                       </div>
                     </div>
                     <Button

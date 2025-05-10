@@ -1,208 +1,202 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-const projectsData = {
+const projectsData: { [key: number]: any } = {
   1: {
-    title: "Gaston: Lighting under a new light",
+    title: "VERDE ROLLO",
     category: "REBRANDING",
-    description:
-      "Una nueva perspectiva en iluminación que combina diseño contemporáneo con funcionalidad excepcional.",
-    client: "Gaston Lighting Co.",
+    description: "Identidad visual para VERDE ROLLO.",
+    client: "VERDE ROLLO",
     year: "2024",
-    services: [
-      "Branding",
-      "Diseño de Packaging",
-      "Dirección de Arte",
-      "Fotografía",
-    ],
-    mainImage:
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=2940&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/VERDE ROLLO/tarjetas_.png",
     images: [
+      { url: "/mockups/VERDE ROLLO/tarjetas_.png", caption: "Tarjetas" },
+      { url: "/mockups/VERDE ROLLO/gomitas.png", caption: "Gomitas" },
       {
-        url: "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?q=80&w=2940&auto=format&fit=crop",
-        size: "large",
-        caption: "Diseño de empaque premium",
+        url: "/mockups/VERDE ROLLO/cookies_del rollo.png",
+        caption: "Cookies del rollo",
       },
-      {
-        url: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=2887&auto=format&fit=crop",
-        size: "small",
-        caption: "Detalles del producto",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=2787&auto=format&fit=crop",
-        size: "medium",
-        caption: "Ambiente y contexto",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=2787&auto=format&fit=crop",
-        size: "small",
-        caption: "Proceso creativo",
-      },
+      { url: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.png", caption: "Caja" },
     ],
     color: "bg-pink-400",
   },
   2: {
-    title: "Phylis: Sustainable packaging",
+    title: "USHI",
     category: "REBRANDING",
-    description:
-      "Redefiniendo el packaging sostenible con un enfoque en la belleza y la responsabilidad ambiental.",
-    client: "Phylis Eco Solutions",
+    description: "Identidad visual para USHI.",
+    client: "USHI",
     year: "2024",
-    services: ["Diseño Sostenible", "Branding", "Estrategia", "Packaging"],
-    mainImage:
-      "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=2787&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/USHI/tarjeta_.png",
     images: [
-      {
-        url: "https://images.unsplash.com/photo-1585435421671-0c16737a6f97?q=80&w=2940&auto=format&fit=crop",
-        size: "large",
-        caption: "Materiales sostenibles",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1597760727511-fe0b0f0e0ea8?q=80&w=2940&auto=format&fit=crop",
-        size: "small",
-        caption: "Proceso de producción",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Impacto ambiental",
-      },
+      { url: "/mockups/USHI/tarjeta_.png", caption: "Tarjeta" },
+      { url: "/mockups/USHI/sala_de_espera.png", caption: "Sala de espera" },
+      { url: "/mockups/USHI/face_roller.png", caption: "Face roller" },
+      { url: "/mockups/USHI/celu_mock up.png", caption: "Celu mockup" },
+      { url: "/mockups/USHI/cartel_calle.png", caption: "Cartel calle" },
+      { url: "/mockups/USHI/bolsa_mockup.png", caption: "Bolsa mockup" },
     ],
     color: "bg-green-200",
   },
   3: {
-    title: "Vintage Everything: Fashion Hunters",
+    title: "POPPY cerámica",
     category: "REBRANDING",
-    description:
-      "Una revolucionaria plataforma de moda vintage que conecta coleccionistas con piezas únicas.",
-    client: "Vintage Everything Co.",
+    description: "Identidad visual para POPPY cerámica.",
+    client: "POPPY cerámica",
     year: "2024",
-    services: ["Branding", "Diseño Web", "Fotografía", "Estrategia Digital"],
-    mainImage:
-      "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2938&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/POPPY cerámica/wrapping paper 1.png",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2940&auto=format&fit=crop",
-        size: "large",
-        caption: "Campaña fotográfica",
+        url: "/mockups/POPPY cerámica/wrapping paper 1.png",
+        caption: "Wrapping paper",
       },
+      { url: "/mockups/POPPY cerámica/tarjetas 1_.png", caption: "Tarjetas" },
+      { url: "/mockups/POPPY cerámica/florero_.png", caption: "Florero" },
       {
-        url: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Concepto de marca",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=2785&auto=format&fit=crop",
-        size: "small",
-        caption: "Detalles de producto",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Experiencia de compra",
+        url: "/mockups/POPPY cerámica/cinta_mock up.png",
+        caption: "Cinta mockup",
       },
     ],
     color: "bg-red-400",
   },
   4: {
-    title: "Schlong: The subtle art of fine living",
+    title: "GOGIYA",
     category: "REBRANDING",
-    description:
-      "Redefiniendo el lujo moderno a través del diseño y la experiencia sensorial.",
-    client: "Schlong Lifestyle",
+    description: "Identidad visual para GOGIYA.",
+    client: "GOGIYA",
     year: "2024",
-    services: [
-      "Branding",
-      "Diseño Editorial",
-      "Dirección de Arte",
-      "Packaging",
-    ],
-    mainImage:
-      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=2940&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/GOGIYA/stickers.png",
     images: [
+      { url: "/mockups/GOGIYA/stickers.png", caption: "Stickers" },
+      { url: "/mockups/GOGIYA/caja_.png", caption: "Caja" },
       {
-        url: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=2787&auto=format&fit=crop",
-        size: "large",
-        caption: "Diseño editorial",
+        url: "/mockups/GOGIYA/Mesa de trabajo 6@3x.png",
+        caption: "Mesa de trabajo",
       },
-      {
-        url: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2940&auto=format&fit=crop",
-        size: "small",
-        caption: "Packaging premium",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Experiencia de marca",
-      },
+      { url: "/mockups/GOGIYA/GOGIYA.png", caption: "Logo" },
+      { url: "/mockups/GOGIYA/Chopsticks_Mockup_2.png", caption: "Chopsticks" },
     ],
     color: "bg-stone-300",
   },
   5: {
-    title: "LeBlink: Skincare for the modern age",
+    title: "GET MOVING",
     category: "REBRANDING",
-    description:
-      "Una marca de skincare que fusiona ciencia avanzada con ingredientes naturales.",
-    client: "LeBlink Beauty",
+    description: "Identidad visual para GET MOVING.",
+    client: "GET MOVING",
     year: "2024",
-    services: ["Branding", "Packaging", "Fotografía", "Estrategia Digital"],
-    mainImage:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?q=80&w=2787&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2940&auto=format&fit=crop",
-        size: "large",
-        caption: "Línea de productos",
+        url: "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
+        caption: "Botella",
+      },
+      { url: "/mockups/GET MOVING/bag_.png", caption: "Bolsa" },
+      {
+        url: "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.png",
+        caption: "Cards",
       },
       {
-        url: "https://images.unsplash.com/photo-1531895861208-8504b98fe814?q=80&w=2940&auto=format&fit=crop",
-        size: "small",
-        caption: "Ingredientes naturales",
+        url: "/mockups/GET MOVING/Free_Business_Card_Mockup_4.png",
+        caption: "Business Card",
       },
       {
-        url: "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Experiencia de usuario",
+        url: "/mockups/GET MOVING/Black & White 1 copy 2.png",
+        caption: "Black & White",
       },
     ],
     color: "bg-blue-200",
   },
   6: {
-    title: "Sensaya: Beauty for everyone",
+    title: "EAT & FIT",
     category: "REBRANDING",
-    description:
-      "Una marca de belleza inclusiva que celebra la diversidad y la autenticidad.",
-    client: "Sensaya Cosmetics",
+    description: "Identidad visual para EAT & FIT.",
+    client: "EAT & FIT",
     year: "2024",
-    services: ["Branding", "Packaging", "Campaña Digital", "Fotografía"],
-    mainImage:
-      "https://images.unsplash.com/photo-1512207846876-bb54ef5056fe?q=80&w=2787&auto=format&fit=crop",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/EAT & FIT/street sign redondo.png",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2940&auto=format&fit=crop",
-        size: "large",
-        caption: "Campaña de inclusividad",
+        url: "/mockups/EAT & FIT/street sign redondo.png",
+        caption: "Street sign",
       },
       {
-        url: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2940&auto=format&fit=crop",
-        size: "medium",
-        caption: "Diversidad en acción",
+        url: "/mockups/EAT & FIT/free salad container mockup_.png",
+        caption: "Salad container",
       },
+      { url: "/mockups/EAT & FIT/bolsa.png", caption: "Bolsa" },
       {
-        url: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2940&auto=format&fit=crop",
-        size: "small",
-        caption: "Productos inclusivos",
+        url: "/mockups/EAT & FIT/Unmark_Business-card_on _metal.png",
+        caption: "Business card metal",
+      },
+      { url: "/mockups/EAT & FIT/PaperBag-Unmark.png", caption: "Paper bag" },
+      {
+        url: "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.png",
+        caption: "Falling business cards",
       },
     ],
     color: "bg-indigo-900",
   },
+  7: {
+    title: "COSMODIVAS",
+    category: "REBRANDING",
+    description: "Identidad visual para COSMODIVAS.",
+    client: "COSMODIVAS",
+    year: "2024",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png",
+    images: [
+      {
+        url: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png",
+        caption: "Business Card",
+      },
+    ],
+    color: "bg-fuchsia-400",
+  },
+  8: {
+    title: "ADONDEYQUE",
+    category: "REBRANDING",
+    description: "Identidad visual para ADONDEYQUE.",
+    client: "ADONDEYQUE",
+    year: "2024",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    mainImage: "/mockups/ADONDEYQUE/piluso.png",
+    images: [
+      { url: "/mockups/ADONDEYQUE/piluso.png", caption: "Piluso" },
+      {
+        url: "/mockups/ADONDEYQUE/Stickers on macbook.png",
+        caption: "Stickers on macbook",
+      },
+      {
+        url: "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.png",
+        caption: "Linen Backpack",
+      },
+      { url: "/mockups/ADONDEYQUE/AGENDA_.png", caption: "Agenda" },
+    ],
+    color: "bg-yellow-400",
+  },
 };
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projectsData[params.id as keyof typeof projectsData];
+  const project = projectsData[Number(params.id)];
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const galleryImages = project.images.filter(
+    (img: { url: string }) => img.url !== project.mainImage
+  );
 
   if (!project) {
     return <div>Proyecto no encontrado</div>;
@@ -273,7 +267,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                 <div>
                   <h3 className="text-sm text-neutral-400 mb-2">SERVICIOS</h3>
                   <ul className="space-y-1">
-                    {project.services.map((service) => (
+                    {project.services.map((service: string) => (
                       <li key={service} className="text-lg">
                         {service}
                       </li>
@@ -285,32 +279,71 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {project.images.map((image, index) => (
-              <motion.div
-                key={image.url}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 * (index + 1) }}
-                className={`relative rounded-2xl overflow-hidden ${
-                  image.size === "large"
-                    ? "md:col-span-8 aspect-[16/9]"
-                    : image.size === "medium"
-                    ? "md:col-span-6 aspect-square"
-                    : "md:col-span-4 aspect-square"
-                }`}
-              >
-                <Image
-                  src={image.url}
-                  alt={image.caption}
-                  fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                  <p className="text-sm text-white">{image.caption}</p>
+            {galleryImages.map(
+              (image: { url: string; caption: string }, idx: number) => (
+                <div
+                  key={image.url}
+                  className="relative rounded-2xl overflow-hidden md:col-span-6 aspect-[16/9] cursor-pointer"
+                  onClick={() => {
+                    setActiveIndex(idx);
+                    setModalOpen(true);
+                  }}
+                >
+                  <Image
+                    src={image.url}
+                    alt={image.caption}
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                    <p className="text-sm text-white">{image.caption}</p>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              )
+            )}
           </div>
+
+          {/* Modal Swiper */}
+          {modalOpen && (
+            <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+              <button
+                className="absolute top-8 right-8 text-white text-3xl z-50"
+                onClick={() => setModalOpen(false)}
+              >
+                ×
+              </button>
+              <div className="w-full max-w-3xl">
+                <Swiper
+                  initialSlide={activeIndex}
+                  navigation
+                  pagination={{ clickable: true }}
+                  effect="fade"
+                  modules={[Navigation, Pagination, EffectFade]}
+                  className="rounded-2xl"
+                >
+                  {galleryImages.map(
+                    (image: { url: string; caption: string }) => (
+                      <SwiperSlide key={image.url}>
+                        <div className="relative w-full h-[60vw] max-h-[70vh]">
+                          <Image
+                            src={image.url}
+                            alt={image.caption}
+                            fill
+                            className="object-contain rounded-2xl"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                            <p className="text-sm text-white">
+                              {image.caption}
+                            </p>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  )}
+                </Swiper>
+              </div>
+            </div>
+          )}
         </motion.div>
       </main>
     </div>

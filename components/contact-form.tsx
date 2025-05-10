@@ -51,6 +51,8 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -67,18 +69,24 @@ export function ContactForm() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
-    try {
-      // Here you would typically send the form data to your backend
-      console.log(values);
-      // Add your form submission logic here
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsSubmitting(false);
+    setSuccess(false);
+    setError(false);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    if (res.ok) {
+      setSuccess(true);
+    } else {
+      setError(true);
+      const errorData = await res.json();
+      console.log("Error al enviar email:", errorData);
     }
-  }
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-16">
@@ -252,8 +260,18 @@ export function ContactForm() {
           </div>
 
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
+            {isSubmitting ? "Enviando..." : "Enviar"}
           </Button>
+          {success && (
+            <p className="text-green-500 text-center mt-4">
+              ¡Mensaje enviado correctamente!
+            </p>
+          )}
+          {error && (
+            <p className="text-red-500 text-center mt-4">
+              Hubo un error al enviar el mensaje. Intenta nuevamente.
+            </p>
+          )}
         </form>
       </Form>
     </div>
