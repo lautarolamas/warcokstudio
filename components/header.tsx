@@ -17,7 +17,7 @@ export function Header() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
         <Link href="/" className="text-sm font-medium tracking-wider">
-          Warcok Estudio
+          Warcok prueba
         </Link>
 
         {/* Desktop Navigation */}
