@@ -77,7 +77,9 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               className="mb-16"
             >
-              <h1 className="text-4xl md:text-5xl font-light mb-10">Contact</h1>
+              <h1 className="text-4xl md:text-5xl font-light mb-10">
+                Contacto
+              </h1>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -92,9 +94,9 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-light mb-2">Email</h3>
-                    <p className="text-neutral-400">info@Warcokstudio.com</p>
+                    <p className="text-neutral-400">belenwarcok@gmail.com</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="text-lg font-light mb-2">Teléfono</h3>
                     <p className="text-neutral-400">+34 123 456 789</p>
                   </div>
@@ -105,24 +107,24 @@ export default function ContactPage() {
                       <br />
                       28001 Madrid, España
                     </p>
-                  </div>
+                  </div> */}
                   <div>
                     <h3 className="text-lg font-light mb-2">Redes sociales</h3>
                     <div className="flex space-x-4">
                       <Link
-                        href="#"
+                        href="https://www.instagram.com/brandingconbelu/"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         Instagram
                       </Link>
                       <Link
-                        href="#"
+                        href="https://www.linkedin.com/in/belenwarcok/"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         LinkedIn
                       </Link>
                       <Link
-                        href="#"
+                        href="https://www.behance.net/bwarcok"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         Behance
@@ -334,23 +336,23 @@ export default function ContactPage() {
       <footer className="py-10 px-6 border-t border-neutral-900">
         <div className="flex justify-between items-center">
           <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Warcok Estudio
+            © {new Date().getFullYear()} Belen Warcok
           </p>
           <div className="flex space-x-6">
             <Link
-              href="#"
+              href="https://www.instagram.com/brandingconbelu/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/belenwarcok/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               LinkedIn
             </Link>
             <Link
-              href="#"
+              href="https://www.behance.net/bwarcok"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Behance

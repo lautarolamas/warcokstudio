@@ -6,9 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Warcok Estudio",
+  title: "Belen Warcok",
   description:
-    "Estudio creativo especializado en diseño, branding y desarrollo",
+    "Estudio de diseño creativo especializado en branding e identidad visual",
   generator: "v0.dev",
 };
 

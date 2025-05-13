@@ -247,10 +247,16 @@ export function ContactForm() {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="small">$1,000 - $5,000</SelectItem>
-                      <SelectItem value="medium">$5,000 - $10,000</SelectItem>
-                      <SelectItem value="large">$10,000 - $25,000</SelectItem>
-                      <SelectItem value="enterprise">$25,000+</SelectItem>
+                      <SelectItem value="$500000-700000">
+                        $500.000 - $700.000
+                      </SelectItem>
+                      <SelectItem value="$700000-900000">
+                        $700.000 - $900.000
+                      </SelectItem>
+                      <SelectItem value="$300000-400000">
+                        $300.000 - $400.000
+                      </SelectItem>
+                      <SelectItem value="otro">Otro</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />

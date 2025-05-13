@@ -17,7 +17,7 @@ export function Header() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
         <Link href="/" className="text-sm font-medium tracking-wider">
-          Warcok Estudio
+          Belen Warcok
         </Link>
 
         {/* Desktop Navigation */}
@@ -28,7 +28,7 @@ export function Header() {
               pathname === "/work" ? "border-b border-white" : ""
             }`}
           >
-            WORK
+            Trabajos
           </Link>
           <Link
             href="/about"
@@ -36,7 +36,7 @@ export function Header() {
               pathname === "/about" ? "border-b border-white" : ""
             }`}
           >
-            ABOUT
+            Sobre mí
           </Link>
           <Link
             href="/contact"
@@ -44,7 +44,7 @@ export function Header() {
               pathname === "/contact" ? "border-b border-white" : ""
             }`}
           >
-            CONTACT
+            Contacto
           </Link>
         </div>
         <div className="hidden md:block w-[100px]"></div>
@@ -93,7 +93,7 @@ export function Header() {
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                WORK
+                Trabajos
               </Link>
               <Link
                 href="/about"
@@ -102,7 +102,7 @@ export function Header() {
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                ABOUT
+                Sobre mí
               </Link>
               <Link
                 href="/contact"
@@ -111,7 +111,7 @@ export function Header() {
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                CONTACT
+                Contacto
               </Link>
             </div>
           </motion.div>

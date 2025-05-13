@@ -14,179 +14,215 @@ import "swiper/css/effect-fade";
 const projectsData: { [key: number]: any } = {
   1: {
     title: "VERDE ROLLO",
-    category: "REBRANDING",
-    description: "Identidad visual para VERDE ROLLO.",
+    description: "Un growshop con onda.",
     client: "VERDE ROLLO",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/VERDE ROLLO/tarjetas_.png",
+    image: "/mockups/VERDE ROLLO/gomitas.webp",
     images: [
-      { url: "/mockups/VERDE ROLLO/tarjetas_.png", caption: "Tarjetas" },
-      { url: "/mockups/VERDE ROLLO/gomitas.png", caption: "Gomitas" },
-      {
-        url: "/mockups/VERDE ROLLO/cookies_del rollo.png",
-        caption: "Cookies del rollo",
-      },
-      { url: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.png", caption: "Caja" },
+      { url: "/mockups/VERDE ROLLO/tarjetas_.webp" },
+      { url: "/mockups/VERDE ROLLO/gomitas.webp" },
+      { url: "/mockups/VERDE ROLLO/cookies_del rollo.webp" },
+      { url: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp" },
     ],
-    color: "bg-pink-400",
+    logos: [
+      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   2: {
-    title: "USHI",
-    category: "REBRANDING",
-    description: "Identidad visual para USHI.",
-    client: "USHI",
+    title: "USHI - Beauty Room",
+    description:
+      "Beauty room en Buenos Aires que mezcla glow, estilo y mucho mimo.",
+    client: "USHI - Beauty Room",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/USHI/tarjeta_.png",
+    image: "/mockups/USHI/celu_mock up.webp",
     images: [
-      { url: "/mockups/USHI/tarjeta_.png", caption: "Tarjeta" },
-      { url: "/mockups/USHI/sala_de_espera.png", caption: "Sala de espera" },
-      { url: "/mockups/USHI/face_roller.png", caption: "Face roller" },
-      { url: "/mockups/USHI/celu_mock up.png", caption: "Celu mockup" },
-      { url: "/mockups/USHI/cartel_calle.png", caption: "Cartel calle" },
-      { url: "/mockups/USHI/bolsa_mockup.png", caption: "Bolsa mockup" },
+      { url: "/mockups/USHI/tarjeta_.webp" },
+      { url: "/mockups/USHI/sala_de_espera.webp" },
+      { url: "/mockups/USHI/face_roller.webp" },
+      { url: "/mockups/USHI/celu_mock up.webp" },
+      { url: "/mockups/USHI/bolsa_mockup.webp" },
     ],
-    color: "bg-green-200",
+    logos: [
+      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   3: {
     title: "POPPY cerámica",
-    category: "REBRANDING",
-    description: "Identidad visual para POPPY cerámica.",
+    description:
+      "Taller de cerámica donde la creatividad se modela con las manos.",
     client: "POPPY cerámica",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/POPPY cerámica/wrapping paper 1.png",
+    image: "/mockups/POPPY cerámica/florero_.webp",
     images: [
-      {
-        url: "/mockups/POPPY cerámica/wrapping paper 1.png",
-        caption: "Wrapping paper",
-      },
-      { url: "/mockups/POPPY cerámica/tarjetas 1_.png", caption: "Tarjetas" },
-      { url: "/mockups/POPPY cerámica/florero_.png", caption: "Florero" },
-      {
-        url: "/mockups/POPPY cerámica/cinta_mock up.png",
-        caption: "Cinta mockup",
-      },
+      { url: "/mockups/POPPY cerámica/wrapping paper 1.webp" },
+      { url: "/mockups/POPPY cerámica/tarjetas 1_.webp" },
+      { url: "/mockups/POPPY cerámica/florero_.webp" },
     ],
-    color: "bg-red-400",
+    logos: [
+      { url: "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   4: {
     title: "GOGIYA",
-    category: "REBRANDING",
-    description: "Identidad visual para GOGIYA.",
+    description: "Korean BBQ que mezcla tradición, fuego y mucho sabor.",
     client: "GOGIYA",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/GOGIYA/stickers.png",
+    image: "/mockups/GOGIYA/caja_.webp",
     images: [
-      { url: "/mockups/GOGIYA/stickers.png", caption: "Stickers" },
-      { url: "/mockups/GOGIYA/caja_.png", caption: "Caja" },
-      {
-        url: "/mockups/GOGIYA/Mesa de trabajo 6@3x.png",
-        caption: "Mesa de trabajo",
-      },
-      { url: "/mockups/GOGIYA/GOGIYA.png", caption: "Logo" },
-      { url: "/mockups/GOGIYA/Chopsticks_Mockup_2.png", caption: "Chopsticks" },
+      { url: "/mockups/GOGIYA/stickers.webp" },
+      { url: "/mockups/GOGIYA/caja_.webp" },
+      { url: "/mockups/GOGIYA/Mesa de trabajo 6@3x.webp" },
+      { url: "/mockups/GOGIYA/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/GOGIYA/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/GOGIYA/Chopsticks_Mockup_2.webp" },
     ],
-    color: "bg-stone-300",
+    logos: [
+      { url: "/mockups/GOGIYA/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/GOGIYA/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/GOGIYA/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/GOGIYA/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   5: {
     title: "GET MOVING",
-    category: "REBRANDING",
-    description: "Identidad visual para GET MOVING.",
+    description: "",
     client: "GET MOVING",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
+    image:
+      "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
     images: [
+      { url: "/mockups/GET MOVING/bag_.webp" },
       {
-        url: "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
-        caption: "Botella",
+        url: "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
       },
-      { url: "/mockups/GET MOVING/bag_.png", caption: "Bolsa" },
-      {
-        url: "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.png",
-        caption: "Cards",
-      },
-      {
-        url: "/mockups/GET MOVING/Free_Business_Card_Mockup_4.png",
-        caption: "Business Card",
-      },
-      {
-        url: "/mockups/GET MOVING/Black & White 1 copy 2.png",
-        caption: "Black & White",
-      },
+      { url: "/mockups/GET MOVING/Free_Business_Card_Mockup_4.webp" },
+      { url: "/mockups/GET MOVING/Black & White 1 copy 2.webp" },
     ],
-    color: "bg-blue-200",
+    logos: [
+      { url: "/mockups/GET MOVING/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/GET MOVING/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/GET MOVING/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/GET MOVING/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   6: {
     title: "EAT & FIT",
-    category: "REBRANDING",
-    description: "Identidad visual para EAT & FIT.",
+    description: "Healthy market en Pilar para comer rápido, rico y sin culpa.",
     client: "EAT & FIT",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/EAT & FIT/street sign redondo.png",
+    image: "/mockups/EAT & FIT/PaperBag-Unmark.webp",
     images: [
+      { url: "/mockups/EAT & FIT/street sign redondo.webp" },
+      { url: "/mockups/EAT & FIT/free salad container mockup_.webp" },
+      { url: "/mockups/EAT & FIT/bolsa.webp" },
+      { url: "/mockups/EAT & FIT/Unmark_Business-card_on _metal.webp" },
+      { url: "/mockups/EAT & FIT/PaperBag-Unmark.webp" },
       {
-        url: "/mockups/EAT & FIT/street sign redondo.png",
-        caption: "Street sign",
-      },
-      {
-        url: "/mockups/EAT & FIT/free salad container mockup_.png",
-        caption: "Salad container",
-      },
-      { url: "/mockups/EAT & FIT/bolsa.png", caption: "Bolsa" },
-      {
-        url: "/mockups/EAT & FIT/Unmark_Business-card_on _metal.png",
-        caption: "Business card metal",
-      },
-      { url: "/mockups/EAT & FIT/PaperBag-Unmark.png", caption: "Paper bag" },
-      {
-        url: "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.png",
-        caption: "Falling business cards",
+        url: "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.webp",
       },
     ],
-    color: "bg-indigo-900",
+    logos: [
+      { url: "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   7: {
-    title: "COSMODIVAS",
-    category: "REBRANDING",
-    description: "Identidad visual para COSMODIVAS.",
-    client: "COSMODIVAS",
+    title: "COSMODIVAS 369",
+    description:
+      "Un universo holístico de astrología, tarot y energía femenina con mucho glam.",
+    client: "COSMODIVAS 369",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png",
+    image: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp",
     images: [
-      {
-        url: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png",
-        caption: "Business Card",
-      },
+      { url: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp" },
+      { url: "/mockups/COSMODIVAS/cartas.webp" },
     ],
-    color: "bg-fuchsia-400",
+    logos: [
+      { url: "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
   },
   8: {
-    title: "ADONDEYQUE",
-    category: "REBRANDING",
-    description: "Identidad visual para ADONDEYQUE.",
-    client: "ADONDEYQUE",
+    title: "Adonde y que ®",
+    description: "Blog de viajes + marketing turístico con alma nómade.",
+    client: "Adonde y que ®",
     year: "2024",
     services: ["Branding", "Packaging", "Dirección de Arte"],
-    mainImage: "/mockups/ADONDEYQUE/piluso.png",
+    image: "/mockups/ADONDEYQUE/AGENDA_.webp",
     images: [
-      { url: "/mockups/ADONDEYQUE/piluso.png", caption: "Piluso" },
-      {
-        url: "/mockups/ADONDEYQUE/Stickers on macbook.png",
-        caption: "Stickers on macbook",
-      },
-      {
-        url: "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.png",
-        caption: "Linen Backpack",
-      },
-      { url: "/mockups/ADONDEYQUE/AGENDA_.png", caption: "Agenda" },
+      { url: "/mockups/ADONDEYQUE/piluso.webp" },
+      { url: "/mockups/ADONDEYQUE/Stickers on macbook.webp" },
+      { url: "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.webp" },
+      { url: "/mockups/ADONDEYQUE/AGENDA_.webp" },
     ],
-    color: "bg-yellow-400",
+    logos: [
+      { url: "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
+  },
+  9: {
+    title: "MALVA café",
+    description: "Café en Palermo con aroma a hogar y estética que abraza.",
+    client: "MALVA café",
+    year: "2024",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    image: "/mockups/MALVA café/FRENTE_CAFETERIA.webp",
+    images: [
+      { url: "/mockups/MALVA café/coffee holder.webp" },
+      { url: "/mockups/MALVA café/REMERA.webp" },
+      { url: "/mockups/MALVA café/Mesa de trabajo 7_1@3x.webp" },
+      { url: "/mockups/MALVA café/Mesa de trabajo 5@3x.webp" },
+      { url: "/mockups/MALVA café/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/MALVA café/FRENTE_CAFETERIA.webp" },
+    ],
+    logos: [
+      { url: "/mockups/MALVA café/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/MALVA café/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/MALVA café/LOGOs/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/MALVA café/LOGOs/Mesa de trabajo 4@3x.webp" },
+    ],
+  },
+  10: {
+    title: "WE TRAVEL",
+    description:
+      "Agencia de viajes pensada para jóvenes que quieren recorrer el mundo sin vueltas.",
+    client: "WE TRAVEL",
+    year: "2024",
+    services: ["Branding", "Packaging", "Dirección de Arte"],
+    image: "/mockups/WE TRAVEL/papeleria_.webp",
+    images: [
+      { url: "/mockups/WE TRAVEL/set_stickers.webp" },
+      { url: "/mockups/WE TRAVEL/papeleria_.webp" },
+      { url: "/mockups/WE TRAVEL/cartel_calle.webp" },
+      { url: "/mockups/WE TRAVEL/Mesa de trabajo 8proyecto.webp" },
+    ],
+    logos: [
+      { url: "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 3@3x.webp" },
+    ],
   },
 };
 
@@ -195,7 +231,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const galleryImages = project.images.filter(
-    (img: { url: string }) => img.url !== project.mainImage
+    (img: { url: string }) => img.url !== project.image
   );
 
   if (!project) {
@@ -206,7 +242,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <div className="bg-black text-white min-h-screen">
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/80 backdrop-blur-sm">
         <Link href="/" className="text-sm font-medium tracking-wider">
-          Warcok Estudio
+          Belen Warcok
         </Link>
         <Link
           href="/"
@@ -246,7 +282,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                 className="aspect-[16/9] relative rounded-2xl overflow-hidden"
               >
                 <Image
-                  src={project.mainImage}
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover"
@@ -278,71 +314,51 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            {galleryImages.map(
-              (image: { url: string; caption: string }, idx: number) => (
-                <div
-                  key={image.url}
-                  className="relative rounded-2xl overflow-hidden md:col-span-6 aspect-[16/9] cursor-pointer"
-                  onClick={() => {
-                    setActiveIndex(idx);
-                    setModalOpen(true);
-                  }}
-                >
-                  <Image
-                    src={image.url}
-                    alt={image.caption}
-                    fill
-                    className="object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                    <p className="text-sm text-white">{image.caption}</p>
+          {/* Galería de imágenes del proyecto */}
+          {project.images && project.images.length > 0 && (
+            <section className="my-12">
+              <h2 className="text-2xl font-light mb-6">Galería</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {project.images.map((img: { url: string }, idx: number) => (
+                  <div
+                    key={idx}
+                    className="w-full h-80 relative rounded-xl overflow-hidden"
+                  >
+                    <Image
+                      src={img.url}
+                      alt={project.title + " imagen " + (idx + 1)}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={idx === 0}
+                    />
                   </div>
-                </div>
-              )
-            )}
-          </div>
-
-          {/* Modal Swiper */}
-          {modalOpen && (
-            <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
-              <button
-                className="absolute top-8 right-8 text-white text-3xl z-50"
-                onClick={() => setModalOpen(false)}
-              >
-                ×
-              </button>
-              <div className="w-full max-w-3xl">
-                <Swiper
-                  initialSlide={activeIndex}
-                  navigation
-                  pagination={{ clickable: true }}
-                  effect="fade"
-                  modules={[Navigation, Pagination, EffectFade]}
-                  className="rounded-2xl"
-                >
-                  {galleryImages.map(
-                    (image: { url: string; caption: string }) => (
-                      <SwiperSlide key={image.url}>
-                        <div className="relative w-full h-[60vw] max-h-[70vh]">
-                          <Image
-                            src={image.url}
-                            alt={image.caption}
-                            fill
-                            className="object-contain rounded-2xl"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                            <p className="text-sm text-white">
-                              {image.caption}
-                            </p>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    )
-                  )}
-                </Swiper>
+                ))}
               </div>
-            </div>
+            </section>
+          )}
+
+          {/* Galería de logos */}
+          {project.logos && project.logos.length > 0 && (
+            <section className="my-12">
+              <h2 className="text-2xl font-light mb-6">Logos</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {project.logos.map((logo: { url: string }, idx: number) => (
+                  <div
+                    key={idx}
+                    className="w-full aspect-square relative rounded-xl overflow-hidden bg-neutral-900"
+                  >
+                    <Image
+                      src={logo.url}
+                      alt={project.title + " logo " + (idx + 1)}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
           )}
         </motion.div>
       </main>

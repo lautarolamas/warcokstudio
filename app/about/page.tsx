@@ -47,12 +47,15 @@ export default function AboutPage() {
               className="mb-16 text-lg leading-relaxed"
             >
               <p className="mb-6">
-                Warcok Estudio es un estudio creativo multidisciplinar
-                especializado en branding, diseño y desarrollo digital. Creamos
-                experiencias visuales únicas que conectan marcas con su
-                audiencia.
+                Belén es diseñadora gráfica especializada en branding e
+                identidad visual, con una mirada creativa, estratégica y muy
+                detallista. Ayuda a marcas a encontrar su voz visual y construir
+                una identidad auténtica que las represente con fuerza y
+                coherencia.Su enfoque combina estética, concepto y funcionalidad
+                para dar vida a universos visuales memorables, que conectan con
+                las personas y generan impacto real.
               </p>
-              <p className="mb-6">
+              {/* <p className="mb-6">
                 Nuestro enfoque combina estrategia, creatividad y tecnología
                 para desarrollar soluciones que no solo son estéticamente
                 atractivas, sino también efectivas y funcionales.
@@ -61,7 +64,7 @@ export default function AboutPage() {
                 Trabajamos con marcas que valoran el diseño como una herramienta
                 estratégica para diferenciarse y conectar con su audiencia de
                 manera significativa.
-              </p>
+              </p> */}
             </motion.div>
 
             <motion.div
@@ -84,19 +87,9 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-light mb-3">Diseño</h3>
                   <ul className="text-neutral-400 space-y-2">
-                    <li>Diseño editorial</li>
                     <li>Packaging</li>
                     <li>Dirección de arte</li>
                     <li>Diseño web</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-light mb-3">Digital</h3>
-                  <ul className="text-neutral-400 space-y-2">
-                    <li>Desarrollo web</li>
-                    <li>UX/UI</li>
-                    <li>Estrategia digital</li>
-                    <li>Contenido digital</li>
                   </ul>
                 </div>
               </div>
@@ -109,8 +102,7 @@ export default function AboutPage() {
             >
               <h2 className="text-2xl font-light mb-6">Contacto</h2>
               <p className="text-neutral-400 mb-4">
-                Si estás interesado en trabajar con nosotros, no dudes en
-                contactarnos.
+                Tenes algún proyecto en mente?
               </p>
               <Link
                 href="/contact"
@@ -126,23 +118,23 @@ export default function AboutPage() {
       <footer className="py-10 px-6 border-t border-neutral-900">
         <div className="flex justify-between items-center">
           <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Warcok Estudio
+            © {new Date().getFullYear()} Belen Warcok
           </p>
           <div className="flex space-x-6">
             <Link
-              href="#"
+              href="https://www.instagram.com/brandingconbelu/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/belenwarcok/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               LinkedIn
             </Link>
             <Link
-              href="#"
+              href="https://www.behance.net/bwarcok"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Behance

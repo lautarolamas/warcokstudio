@@ -28,106 +28,104 @@ export default function Home() {
 
   const projects = [
     {
-      id: 1,
-      title: "VERDE ROLLO",
-      category: "REBRANDING",
+      id: 4,
+      title: "GOGIYA",
       images: [
-        "/mockups/VERDE ROLLO/tarjetas_.png",
-        "/mockups/VERDE ROLLO/gomitas.png",
-        "/mockups/VERDE ROLLO/cookies_del rollo.png",
-        "/mockups/VERDE ROLLO/VERDE ROLLO_caja.png",
+        "/mockups/GOGIYA/stickers.webp",
+        "/mockups/GOGIYA/caja_.webp",
+        "/mockups/GOGIYA/Mesa de trabajo 6@3x.webp",
+        "/mockups/GOGIYA/GOGIYA.webp",
+        "/mockups/GOGIYA/Chopsticks_Mockup_2.webp",
       ],
-      image: "/mockups/VERDE ROLLO/tarjetas_.png",
+      image: "/mockups/GOGIYA/caja_.webp",
     },
     {
       id: 2,
-      title: "USHI",
-      category: "REBRANDING",
+      title: "USHI - Beauty Room",
       images: [
-        "/mockups/USHI/tarjeta_.png",
-        "/mockups/USHI/sala_de_espera.png",
-        "/mockups/USHI/face_roller.png",
-        "/mockups/USHI/celu_mock up.png",
-        "/mockups/USHI/cartel_calle.png",
-        "/mockups/USHI/bolsa_mockup.png",
+        "/mockups/USHI/tarjeta_.webp",
+        "/mockups/USHI/sala_de_espera.webp",
+        "/mockups/USHI/face_roller.webp",
+        "/mockups/USHI/celu_mock up.webp",
+        "/mockups/USHI/cartel_calle.webp",
+        "/mockups/USHI/bolsa_mockup.webp",
       ],
-      image: "/mockups/USHI/tarjeta_.png",
+      image: "/mockups/USHI/celu_mock up.webp",
     },
     {
       id: 3,
-      title: "POPPY cerámica",
-      category: "REBRANDING",
+      title: "POPPY",
+
       images: [
-        "/mockups/POPPY cerámica/wrapping paper 1.png",
-        "/mockups/POPPY cerámica/tarjetas 1_.png",
-        "/mockups/POPPY cerámica/florero_.png",
-        "/mockups/POPPY cerámica/cinta_mock up.png",
+        "/mockups/POPPY cerámica/wrapping paper 1.webp",
+        "/mockups/POPPY cerámica/tarjetas 1_.webp",
+        "/mockups/POPPY cerámica/florero_.webp",
+        "/mockups/POPPY cerámica/cinta_mock up.webp",
       ],
-      image: "/mockups/POPPY cerámica/wrapping paper 1.png",
+      image: "/mockups/POPPY cerámica/florero_.webp",
     },
     {
-      id: 4,
-      title: "GOGIYA",
-      category: "REBRANDING",
+      id: 8,
+      title: "ADONDE Y QUE ®",
+
       images: [
-        "/mockups/GOGIYA/stickers.png",
-        "/mockups/GOGIYA/caja_.png",
-        "/mockups/GOGIYA/Mesa de trabajo 6@3x.png",
-        "/mockups/GOGIYA/GOGIYA.png",
-        "/mockups/GOGIYA/Chopsticks_Mockup_2.png",
+        "/mockups/ADONDEYQUE/piluso.webp",
+        "/mockups/ADONDEYQUE/Stickers on macbook.webp",
+        "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.webp",
+        "/mockups/ADONDEYQUE/AGENDA_.webp",
       ],
-      image: "/mockups/GOGIYA/stickers.png",
+      image: "/mockups/ADONDEYQUE/AGENDA_.webp",
     },
     {
       id: 5,
       title: "GET MOVING",
-      category: "REBRANDING",
+
       images: [
-        "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
-        "/mockups/GET MOVING/bag_.png",
-        "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.png",
-        "/mockups/GET MOVING/Free_Business_Card_Mockup_4.png",
-        "/mockups/GET MOVING/Black & White 1 copy 2.png",
+        "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.webp",
+        "/mockups/GET MOVING/bag_.webp",
+        "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
+        "/mockups/GET MOVING/Free_Business_Card_Mockup_4.webp",
+        "/mockups/GET MOVING/Black & White 1 copy 2.webp",
       ],
-      image: "/mockups/GET MOVING/free-bottle-mockup-sachanati.com.png",
+      image:
+        "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
     },
     {
       id: 6,
       title: "EAT & FIT",
-      category: "REBRANDING",
+
       images: [
-        "/mockups/EAT & FIT/street sign redondo.png",
-        "/mockups/EAT & FIT/free salad container mockup_.png",
-        "/mockups/EAT & FIT/bolsa.png",
-        "/mockups/EAT & FIT/Unmark_Business-card_on _metal.png",
-        "/mockups/EAT & FIT/PaperBag-Unmark.png",
-        "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.png",
+        "/mockups/EAT & FIT/street sign redondo.webp",
+        "/mockups/EAT & FIT/free salad container mockup_.webp",
+        "/mockups/EAT & FIT/bolsa.webp",
+        "/mockups/EAT & FIT/Unmark_Business-card_on _metal.webp",
+        "/mockups/EAT & FIT/PaperBag-Unmark.webp",
+        "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.webp",
       ],
-      image: "/mockups/EAT & FIT/street sign redondo.png",
+      image: "/mockups/EAT & FIT/PaperBag-Unmark.webp",
     },
     {
       id: 7,
       title: "COSMODIVAS",
-      category: "REBRANDING",
-      images: ["/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png"],
-      image: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.png",
+
+      images: ["/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp"],
+      image: "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp",
     },
     {
-      id: 8,
-      title: "ADONDEYQUE",
-      category: "REBRANDING",
+      id: 1,
+      title: "VERDE ROLLO",
+
       images: [
-        "/mockups/ADONDEYQUE/piluso.png",
-        "/mockups/ADONDEYQUE/Stickers on macbook.png",
-        "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.png",
-        "/mockups/ADONDEYQUE/AGENDA_.png",
+        "/mockups/VERDE ROLLO/tarjetas_.webp",
+        "/mockups/VERDE ROLLO/gomitas.webp",
+        "/mockups/VERDE ROLLO/cookies_del rollo.webp",
+        "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
       ],
-      image: "/mockups/ADONDEYQUE/piluso.png",
+      image: "/mockups/VERDE ROLLO/gomitas.webp",
     },
   ];
 
-  // Animación de letras para el título
-  const title = "Warcok Estudio";
+  const title = "Belen Warcok";
   const letters = title.split("");
 
   const [showAll, setShowAll] = useState(false);
@@ -137,7 +135,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="h-screen flex items-center justify-center relative">
+        <section className="h-screen flex flex-col items-center justify-center relative">
           <motion.h1
             initial={{ scale: 0.6 }}
             animate={{ scale: 1 }}
@@ -162,6 +160,14 @@ export default function Home() {
               </motion.span>
             ))}
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-base md:text-2xl text-neutral-400 mt-6 text-center tracking-wide"
+          >
+            CREANDO MARCAS CON PROPÓSITO
+          </motion.p>
           <FloatingImages
             images={projects.map((project) => ({
               src: project.image,
@@ -250,9 +256,7 @@ export default function Home() {
                           <h3 className="text-2xl font-light text-white mb-2">
                             {project.title}
                           </h3>
-                          <p className="text-sm text-neutral-300">
-                            {project.category}
-                          </p>
+                          <p className="text-sm text-neutral-300"></p>
                         </div>
                       </motion.div>
                     </div>
@@ -293,9 +297,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm max-w-2xl mx-auto text-neutral-400 uppercase tracking-wider"
           >
-            ESTUDIO CREATIVO ESPECIALIZADO EN BRANDING Y DISEÑO
-            <br />
-            ENFOCADO EN CREAR EXPERIENCIAS VISUALES ÚNICAS
+            Estudio de diseño creativo especializado en branding e identidad
+            visual
           </motion.p>
         </section>
 
@@ -305,23 +308,23 @@ export default function Home() {
       <footer className="py-10 px-6 border-t border-neutral-900">
         <div className="flex justify-between items-center">
           <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Warcok Estudio
+            © {new Date().getFullYear()} Belen Warcok
           </p>
           <div className="flex space-x-6">
             <Link
-              href="#"
+              href="https://www.instagram.com/brandingconbelu/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/belenwarcok/"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               LinkedIn
             </Link>
             <Link
-              href="#"
+              href="https://www.behance.net/bwarcok"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Behance
