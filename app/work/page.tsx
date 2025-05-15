@@ -213,24 +213,30 @@ export default function WorkPage() {
             © {new Date().getFullYear()} Belen Warcok
           </p>
           <div className="flex space-x-6">
-            <Link
+            <a
               href="https://www.instagram.com/brandingconbelu/"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
             >
               Instagram
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.linkedin.com/in/belenwarcok/"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
             >
               LinkedIn
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.behance.net/bwarcok"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
             >
               Behance
-            </Link>
+            </a>
           </div>
         </div>
       </footer>

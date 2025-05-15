@@ -3,8 +3,31 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Verificar al montar el componente
+    checkIsDesktop();
+
+    // Agregar listener para cambios de tamaño
+    window.addEventListener("resize", checkIsDesktop);
+
+    return () => {
+      window.removeEventListener("resize", checkIsDesktop);
+    };
+  }, []);
+
+  return isDesktop;
+};
+
 export function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const isDesktop = useIsDesktop();
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
@@ -17,6 +40,8 @@ export function CustomCursor() {
       window.removeEventListener("mousemove", updateMousePosition);
     };
   }, []);
+
+  if (!isDesktop) return null;
 
   return (
     <motion.div

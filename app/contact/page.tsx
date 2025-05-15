@@ -111,24 +111,30 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-light mb-2">Redes sociales</h3>
                     <div className="flex space-x-4">
-                      <Link
+                      <a
                         href="https://www.instagram.com/brandingconbelu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         Instagram
-                      </Link>
-                      <Link
+                      </a>
+                      <a
                         href="https://www.linkedin.com/in/belenwarcok/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         LinkedIn
-                      </Link>
-                      <Link
+                      </a>
+                      <a
                         href="https://www.behance.net/bwarcok"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-neutral-400 hover:text-white transition-colors"
                       >
                         Behance
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -345,24 +351,30 @@ export default function ContactPage() {
             © {new Date().getFullYear()} Belen Warcok
           </p>
           <div className="flex space-x-6">
-            <Link
+            <a
               href="https://www.instagram.com/brandingconbelu/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Instagram
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.linkedin.com/in/belenwarcok/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               LinkedIn
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.behance.net/bwarcok"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-neutral-500 hover:text-white transition-colors"
             >
               Behance
-            </Link>
+            </a>
           </div>
         </div>
       </footer>
