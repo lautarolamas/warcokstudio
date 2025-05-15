@@ -128,7 +128,7 @@ export default function Home() {
         "/mockups/VERDE ROLLO/cookies_del rollo.webp",
         "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
       ],
-      image: "/mockups/VERDE ROLLO/gomitas.webp",
+      image: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
     },
   ];
 

@@ -18,7 +18,7 @@ const projectsData: { [key: number]: any } = {
     client: "VERDE ROLLO",
     year: "2024",
     services: ["Branding", "Packaging", "Copywriting creativo"],
-    image: "/mockups/VERDE ROLLO/gomitas.webp",
+    image: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
     images: [
       { url: "/mockups/VERDE ROLLO/tarjetas_.webp" },
       { url: "/mockups/VERDE ROLLO/gomitas.webp" },

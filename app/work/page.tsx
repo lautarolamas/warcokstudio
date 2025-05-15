@@ -15,7 +15,7 @@ const projects = [
       "/mockups/VERDE ROLLO/cookies_del rollo.webp",
       "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
     ],
-    image: "/mockups/VERDE ROLLO/gomitas.webp",
+    image: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
   },
   {
     id: 2,
@@ -194,9 +194,6 @@ export default function WorkPage() {
                         <h3 className="text-2xl font-light text-white mb-2">
                           {project.title}
                         </h3>
-                        <p className="text-sm text-neutral-300">
-                          {project.category}
-                        </p>
                       </div>
                     </motion.div>
                   </div>
