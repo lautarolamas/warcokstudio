@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import { CustomCursor } from "@/components/custom-cursor";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Belen Warcok",
@@ -30,6 +31,7 @@ export default function RootLayout({
           <CustomCursor />
           {children}
           <Analytics />
+          <GoogleAnalytics gaId="G-DVE9KV61VV" />
         </ThemeProvider>
       </body>
     </html>
