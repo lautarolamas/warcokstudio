@@ -17,7 +17,7 @@ const projectsData: { [key: number]: any } = {
     description: "Un growshop con onda.",
     client: "VERDE ROLLO",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Branding", "Packaging", "Copywriting creativo"],
     image: "/mockups/VERDE ROLLO/gomitas.webp",
     images: [
       { url: "/mockups/VERDE ROLLO/tarjetas_.webp" },
@@ -38,7 +38,7 @@ const projectsData: { [key: number]: any } = {
       "Beauty room en Buenos Aires que mezcla glow, estilo y mucho mimo.",
     client: "USHI - Beauty Room",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Rebranding", "Estrategia creativa"],
     image: "/mockups/USHI/celu_mock up.webp",
     images: [
       { url: "/mockups/USHI/tarjeta_.webp" },
@@ -60,7 +60,7 @@ const projectsData: { [key: number]: any } = {
       "Taller de cerámica donde la creatividad se modela con las manos.",
     client: "POPPY cerámica",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Branding completo"],
     image: "/mockups/POPPY cerámica/florero_.webp",
     images: [
       { url: "/mockups/POPPY cerámica/wrapping paper 1.webp" },
@@ -79,7 +79,7 @@ const projectsData: { [key: number]: any } = {
     description: "Korean BBQ que mezcla tradición, fuego y mucho sabor.",
     client: "GOGIYA",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Branding", "Packaging", "Menú Design"],
     image: "/mockups/GOGIYA/caja_.webp",
     images: [
       { url: "/mockups/GOGIYA/stickers.webp" },
@@ -124,7 +124,7 @@ const projectsData: { [key: number]: any } = {
     description: "Healthy market en Pilar para comer rápido, rico y sin culpa.",
     client: "EAT & FIT",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Rebranding", "Packaging design", "Social Media"],
     image: "/mockups/EAT & FIT/PaperBag-Unmark.webp",
     images: [
       { url: "/mockups/EAT & FIT/street sign redondo.webp" },
@@ -167,7 +167,7 @@ const projectsData: { [key: number]: any } = {
     description: "Blog de viajes + marketing turístico con alma nómade.",
     client: "Adonde y que ®",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Branding completo"],
     image: "/mockups/ADONDEYQUE/AGENDA_.webp",
     images: [
       { url: "/mockups/ADONDEYQUE/piluso.webp" },
@@ -187,7 +187,7 @@ const projectsData: { [key: number]: any } = {
     description: "Café en Palermo con aroma a hogar y estética que abraza.",
     client: "MALVA café",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Branding", "Estrategia para Redes", "Diseño de vidriera"],
     image: "/mockups/MALVA café/FRENTE_CAFETERIA.webp",
     images: [
       { url: "/mockups/MALVA café/coffee holder.webp" },
@@ -210,7 +210,7 @@ const projectsData: { [key: number]: any } = {
       "Agencia de viajes pensada para jóvenes que quieren recorrer el mundo sin vueltas.",
     client: "WE TRAVEL",
     year: "2024",
-    services: ["Branding", "Packaging", "Dirección de Arte"],
+    services: ["Identidad visual"],
     image: "/mockups/WE TRAVEL/papeleria_.webp",
     images: [
       { url: "/mockups/WE TRAVEL/set_stickers.webp" },

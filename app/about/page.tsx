@@ -47,13 +47,13 @@ export default function AboutPage() {
               className="mb-16 text-lg leading-relaxed"
             >
               <p className="mb-6">
-                Belén es diseñadora gráfica especializada en branding e
-                identidad visual, con una mirada creativa, estratégica y muy
-                detallista. Ayuda a marcas a encontrar su voz visual y construir
-                una identidad auténtica que las represente con fuerza y
-                coherencia.Su enfoque combina estética, concepto y funcionalidad
-                para dar vida a universos visuales memorables, que conectan con
-                las personas y generan impacto real.
+                Soy diseñadora gráfica especializada en branding e identidad
+                visual. Me encanta crear marcas con personalidad, que se vean
+                bien y comuniquen mejor. Ayudo a emprendedores y negocios a
+                encontrar su voz visual y construir una identidad que los
+                represente de forma auténtica, coherente y con mucha onda.
+                Trabajo combinando estética, concepto y funcionalidad para crear
+                universos visuales que conectan de verdad y dejan huella.
               </p>
               {/* <p className="mb-6">
                 Nuestro enfoque combina estrategia, creatividad y tecnología

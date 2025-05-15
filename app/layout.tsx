@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import { CustomCursor } from "@/components/custom-cursor";
 
 export const metadata: Metadata = {
   title: "Belen Warcok",
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CustomCursor />
           {children}
           <Analytics />
         </ThemeProvider>

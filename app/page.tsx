@@ -1,12 +1,19 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { Header } from "@/components/header";
 import { FloatingImages } from "@/components/floating-images";
+import { CustomCursor } from "@/components/custom-cursor";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -168,6 +175,14 @@ export default function Home() {
           >
             CREANDO MARCAS CON PROPÓSITO
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="w-full flex justify-center mt-2"
+          >
+            <AutoCarouselText />
+          </motion.div>
           <FloatingImages
             images={projects.map((project) => ({
               src: project.image,
@@ -332,6 +347,43 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function AutoCarouselText() {
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    if (!api) return;
+    intervalRef.current = setInterval(() => {
+      if (api) api.scrollNext();
+    }, 2000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [api]);
+
+  const words = ["BRANDING", "DISEÑO", "CREATIVIDAD"];
+
+  return (
+    <div className="w-full max-w-xl">
+      <Carousel
+        opts={{ loop: true, align: "start", duration: 700 }}
+        setApi={setApi}
+        className="overflow-hidden [&_.embla__slide]:transition-transform [&_.embla__slide]:duration-500 [&_.embla__slide]:ease-in-out"
+      >
+        <CarouselContent>
+          {words.map((word, i) => (
+            <CarouselItem key={i}>
+              <div className="text-base md:text-2xl text-neutral-100 text-center tracking-wide whitespace-nowrap px-8">
+                {word}
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </div>
   );
 }
