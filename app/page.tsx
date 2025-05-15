@@ -147,7 +147,6 @@ export default function Home() {
             initial={{ scale: 0.6 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 70, damping: 18 }}
-            style={{ opacity, scale }}
             className="text-[13vw] leading-none font-medium text-white text-center px-4 flex justify-center"
             aria-label={title}
           >
