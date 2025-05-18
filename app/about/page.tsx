@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Instagram, Linkedin } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -115,39 +117,7 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <footer className="py-10 px-6 border-t border-neutral-900">
-        <div className="flex justify-between items-center">
-          <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Belen Warcok
-          </p>
-          <div className="flex space-x-6">
-            <a
-              href="https://www.instagram.com/brandingconbelu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-400 hover:text-white transition-colors"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/belenwarcok/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-400 hover:text-white transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://www.behance.net/bwarcok"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-400 hover:text-white transition-colors"
-            >
-              Behance
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Instagram, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -345,39 +347,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className="py-10 px-6 border-t border-neutral-900">
-        <div className="flex justify-between items-center">
-          <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Belen Warcok
-          </p>
-          <div className="flex space-x-6">
-            <a
-              href="https://www.instagram.com/brandingconbelu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/in/belenwarcok/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://www.behance.net/bwarcok"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-neutral-500 hover:text-white transition-colors"
-            >
-              Behance
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
