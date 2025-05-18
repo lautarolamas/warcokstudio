@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import { useRouter } from "next/navigation";
 
 const projectsData: { [key: number]: any } = {
   1: {
@@ -227,6 +228,7 @@ const projectsData: { [key: number]: any } = {
 };
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
+  const router = useRouter();
   const project = projectsData[Number(params.id)];
   const [modalOpen, setModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -244,12 +246,12 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <Link href="/" className="text-sm font-medium tracking-wider">
           Belen Warcok
         </Link>
-        <Link
-          href="/"
+        <button
+          onClick={() => router.back()}
           className="text-sm font-medium hover:opacity-70 transition-opacity"
         >
           ← VOLVER
-        </Link>
+        </button>
       </header>
 
       <main className="pt-32 pb-20 px-6">
