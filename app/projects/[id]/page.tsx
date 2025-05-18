@@ -26,10 +26,10 @@ const projectsData: { [key: number]: any } = {
       { url: "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp" },
     ],
     logos: [
-      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 1@3x.webp" },
-      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 2@3x.webp" },
-      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 3@3x.webp" },
-      { url: "/mockups/VERDE ROLLO/LOGOs/Mesa de trabajo 4@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 4@3x.webp" },
     ],
   },
   2: {
@@ -48,10 +48,10 @@ const projectsData: { [key: number]: any } = {
       { url: "/mockups/USHI/bolsa_mockup.webp" },
     ],
     logos: [
-      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 1@3x.webp" },
-      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 2@3x.webp" },
-      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 3@3x.webp" },
-      { url: "/mockups/USHI/LOGOs/Mesa de trabajo 4@3x.webp" },
+      { url: "/mockups/USHI/LOGOS/Mesa de trabajo 1@3x.webp" },
+      { url: "/mockups/USHI/LOGOS/Mesa de trabajo 2@3x.webp" },
+      { url: "/mockups/USHI/LOGOS/Mesa de trabajo 3@3x.webp" },
+      { url: "/mockups/USHI/LOGOS/Mesa de trabajo 4@3x.webp" },
     ],
   },
   3: {
