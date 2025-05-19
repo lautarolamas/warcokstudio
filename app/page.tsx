@@ -9,6 +9,7 @@ import { Header } from "@/components/header";
 import { FloatingImages } from "@/components/floating-images";
 import { CustomCursor } from "@/components/custom-cursor";
 import { Footer } from "@/components/footer";
+import { ProjectCard } from "@/components/project-card";
 import {
   Carousel,
   CarouselContent,
@@ -200,12 +201,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 auto-rows-[400px] gap-6">
             {(showAll ? projects : projects.slice(0, 4)).map(
               (project, index) => (
-                <motion.div
+                <ProjectCard
                   key={project.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true, margin: "-10%" }}
+                  id={project.id}
+                  title={project.title}
+                  image={project.image}
+                  index={index}
+                  priority={index < 2}
                   className={`project-item ${
                     index === 0
                       ? "lg:col-span-8 lg:row-span-2"
@@ -219,65 +221,7 @@ export default function Home() {
                       ? "lg:col-span-6 lg:row-span-1"
                       : "lg:col-span-6 lg:row-span-1"
                   }`}
-                >
-                  <Link
-                    href={`/projects/${project.id}`}
-                    className="block h-full"
-                  >
-                    <div className="relative overflow-hidden group h-full rounded-2xl">
-                      <motion.div
-                        whileHover={{
-                          scale: 1.05,
-                          transition: {
-                            duration: 0.6,
-                            ease: [0.33, 1, 0.68, 1],
-                          },
-                        }}
-                        className="relative h-full"
-                      >
-                        <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                        <motion.div
-                          whileHover={{
-                            filter: "brightness(1.1) contrast(1.1)",
-                            transition: { duration: 0.4 },
-                          }}
-                          className="h-full"
-                        >
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={1200}
-                            height={800}
-                            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                            priority={index < 2}
-                          />
-                        </motion.div>
-                        <motion.div
-                          className="absolute inset-0 z-0"
-                          whileHover={{
-                            opacity: [0, 0.05, 0],
-                            scale: [1, 1.2, 1],
-                            transition: {
-                              duration: 1.5,
-                              repeat: Number.POSITIVE_INFINITY,
-                              repeatType: "loop",
-                            },
-                          }}
-                        >
-                          <div
-                            className={`absolute inset-0 mix-blend-overlay opacity-40`}
-                          ></div>
-                        </motion.div>
-                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                          <h3 className="text-2xl font-light text-white mb-2">
-                            {project.title}
-                          </h3>
-                          <p className="text-sm text-neutral-300"></p>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </Link>
-                </motion.div>
+                />
               )
             )}
           </div>
