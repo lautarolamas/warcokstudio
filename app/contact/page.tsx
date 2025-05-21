@@ -54,14 +54,11 @@ export default function ContactPage() {
         submitted: true,
         loading: false,
       }));
-      console.log("¡Mensaje enviado correctamente!");
     } else {
       setFormState((prev) => ({
         ...prev,
         loading: false,
       }));
-      const errorData = await res.json();
-      console.log("Error al enviar email:", errorData);
       alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
     }
   };

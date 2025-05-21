@@ -11,7 +11,6 @@ async function optimizeImage(filePath) {
     .webp({ quality: 80 })
     .toFile(webpPath);
   fs.unlinkSync(filePath); // Elimina el original
-  console.log(`Optimizado: ${webpPath}`);
 }
 
 function walkDir(dir) {

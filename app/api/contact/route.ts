@@ -3,13 +3,10 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
     // Verificar que la API key existe
     if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY no está definida en las variables de entorno");
       return NextResponse.json(
         { error: "Error de configuración del servidor" },
         { status: 500 }
@@ -17,7 +14,6 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    console.log("Datos recibidos:", body);
 
     const {
       name,
@@ -47,8 +43,6 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log("Intentando enviar email...");
-    
     // Enviar email usando el dominio verificado
     const { data, error } = await resend.emails.send({
       from: "Branding con Belu <contacto@brandingconbelu.com>",
@@ -70,7 +64,6 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Error detallado de Resend:", error);
       return NextResponse.json(
         { 
           error: "Error al enviar el email",
@@ -80,11 +73,9 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log("Email enviado exitosamente:", data);
     return NextResponse.json({ success: true, data });
 
   } catch (error: any) {
-    console.error("Error completo en el servidor:", error);
     return NextResponse.json(
       { 
         error: "Error interno del servidor",
