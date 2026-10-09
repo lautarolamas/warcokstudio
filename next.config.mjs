@@ -13,6 +13,12 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/**": ["./content/**/*"],
   },
+  // Como el almacenamiento en disco arma rutas a partir de process.cwd(), el
+  // trazado incluía todo el proyecto (.git, imágenes de public/) en cada
+  // función y superaba el límite de Vercel. public/ lo sirve el CDN.
+  outputFileTracingExcludes: {
+    "/**": ["./.git/**/*", "./public/**/*", "./scripts/**/*", "./tsconfig.tsbuildinfo"],
+  },
   async rewrites() {
     return {
       // Las imágenes subidas desde el panel viven en public/uploads. Mientras
