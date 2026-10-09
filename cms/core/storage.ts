@@ -22,7 +22,10 @@ const MEDIA_DIR = process.env.CMS_MEDIA_DIR || "public/uploads";
 export const MEDIA_URL_PREFIX = "/uploads";
 
 function filesystemStorage(): CmsStorage {
-  const root = process.cwd();
+  // cwd() indirecto a propósito: si el trazado de Next ve process.cwd() junto
+  // a rutas dinámicas, mete todo el proyecto en cada función (y en Vercel
+  // supera el límite de tamaño). content/ se incluye en next.config.mjs.
+  const root: string = Reflect.apply(process.cwd, process, []);
   return {
     kind: "filesystem",
     async readContent() {
