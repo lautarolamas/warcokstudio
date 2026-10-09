@@ -1,0 +1,446 @@
+{
+  "settings": {
+    "siteName": "Belen Warcok",
+    "seoTitle": "Belen Warcok",
+    "seoDescription": "Estudio de diseño creativo especializado en branding e identidad visual",
+    "nav": [
+      {
+        "label": "Trabajos",
+        "href": "/work"
+      },
+      {
+        "label": "Sobre mí",
+        "href": "/about"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contact"
+      }
+    ],
+    "socials": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/brandingconbelu/",
+        "icon": "instagram"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/belenwarcok/",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Behance",
+        "url": "https://www.behance.net/bwarcok",
+        "icon": "behance"
+      }
+    ],
+    "footerName": "Belen Warcok",
+    "creditLabel": "Desarrollo web:",
+    "creditName": "Lautaro Lamas",
+    "creditUrl": "https://www.linkedin.com/in/lautaro-lamas-504643169/"
+  },
+  "collections": {
+    "projects": [
+      {
+        "id": "1",
+        "title": "VERDE ROLLO",
+        "cardTitle": "VERDE ROLLO",
+        "description": "Un growshop con onda.",
+        "client": "VERDE ROLLO",
+        "year": "2024",
+        "services": [
+          "Branding",
+          "Packaging",
+          "Copywriting creativo"
+        ],
+        "image": "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp",
+        "images": [
+          "/mockups/VERDE ROLLO/tarjetas_.webp",
+          "/mockups/VERDE ROLLO/gomitas.webp",
+          "/mockups/VERDE ROLLO/cookies_del rollo.webp",
+          "/mockups/VERDE ROLLO/VERDE ROLLO_caja.webp"
+        ],
+        "logos": [
+          "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 1@3x.webp",
+          "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 2@3x.webp",
+          "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 3@3x.webp",
+          "/mockups/VERDE ROLLO/LOGOS/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "USHI - Beauty Room",
+        "cardTitle": "USHI",
+        "description": "Beauty room en Buenos Aires que mezcla glow, estilo y mucho mimo.",
+        "client": "USHI - Beauty Room",
+        "year": "2024",
+        "services": [
+          "Rebranding",
+          "Estrategia creativa"
+        ],
+        "image": "/mockups/USHI/celu_mock up.webp",
+        "images": [
+          "/mockups/USHI/tarjeta_.webp",
+          "/mockups/USHI/sala_de_espera.webp",
+          "/mockups/USHI/face_roller.webp",
+          "/mockups/USHI/celu_mock up.webp",
+          "/mockups/USHI/bolsa_mockup.webp"
+        ],
+        "logos": [
+          "/mockups/USHI/LOGOS/Mesa de trabajo 1@3x.webp",
+          "/mockups/USHI/LOGOS/Mesa de trabajo 2@3x.webp",
+          "/mockups/USHI/LOGOS/Mesa de trabajo 3@3x.webp",
+          "/mockups/USHI/LOGOS/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "POPPY cerámica",
+        "cardTitle": "POPPY",
+        "description": "Taller de cerámica donde la creatividad se modela con las manos.",
+        "client": "POPPY cerámica",
+        "year": "2024",
+        "services": [
+          "Branding completo"
+        ],
+        "image": "/mockups/POPPY cerámica/florero_.webp",
+        "images": [
+          "/mockups/POPPY cerámica/wrapping paper 1.webp",
+          "/mockups/POPPY cerámica/tarjetas 1_.webp",
+          "/mockups/POPPY cerámica/florero_.webp"
+        ],
+        "logos": [
+          "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 1@3x.webp",
+          "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 2@3x.webp",
+          "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 3@3x.webp",
+          "/mockups/POPPY cerámica/LOGOS/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "GOGIYA",
+        "cardTitle": "GOGIYA",
+        "description": "Korean BBQ que mezcla tradición, fuego y mucho sabor.",
+        "client": "GOGIYA",
+        "year": "2024",
+        "services": [
+          "Branding",
+          "Packaging",
+          "Menú Design"
+        ],
+        "image": "/mockups/GOGIYA/caja_.webp",
+        "images": [
+          "/mockups/GOGIYA/stickers.webp",
+          "/mockups/GOGIYA/caja_.webp",
+          "/mockups/GOGIYA/Mesa de trabajo 6@3x.webp",
+          "/mockups/GOGIYA/Mesa de trabajo 3@3x.webp",
+          "/mockups/GOGIYA/Mesa de trabajo 2@3x.webp",
+          "/mockups/GOGIYA/Chopsticks_Mockup_2.webp"
+        ],
+        "logos": [
+          "/mockups/GOGIYA/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/GOGIYA/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/GOGIYA/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/GOGIYA/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "GET MOVING",
+        "cardTitle": "GET MOVING",
+        "description": "",
+        "client": "GET MOVING",
+        "year": "2024",
+        "services": [
+          "Branding",
+          "Packaging",
+          "Dirección de Arte"
+        ],
+        "image": "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
+        "images": [
+          "/mockups/GET MOVING/bag_.webp",
+          "/mockups/GET MOVING/Gravity-Identity-Brand-Cards-Free-psd-Mockup.webp",
+          "/mockups/GET MOVING/Free_Business_Card_Mockup_4.webp",
+          "/mockups/GET MOVING/Black & White 1 copy 2.webp"
+        ],
+        "logos": [
+          "/mockups/GET MOVING/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/GET MOVING/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/GET MOVING/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/GET MOVING/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "EAT & FIT",
+        "cardTitle": "EAT & FIT",
+        "description": "Healthy market en Pilar para comer rápido, rico y sin culpa.",
+        "client": "EAT & FIT",
+        "year": "2024",
+        "services": [
+          "Rebranding",
+          "Packaging design",
+          "Social Media"
+        ],
+        "image": "/mockups/EAT & FIT/PaperBag-Unmark.webp",
+        "images": [
+          "/mockups/EAT & FIT/street sign redondo.webp",
+          "/mockups/EAT & FIT/free salad container mockup_.webp",
+          "/mockups/EAT & FIT/bolsa.webp",
+          "/mockups/EAT & FIT/Unmark_Business-card_on _metal.webp",
+          "/mockups/EAT & FIT/PaperBag-Unmark.webp",
+          "/mockups/EAT & FIT/Falling-Business-Cards-Identity-Free-psd-Mockup.webp"
+        ],
+        "logos": [
+          "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/EAT & FIT/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "7",
+        "title": "COSMODIVAS 369",
+        "cardTitle": "COSMODIVAS",
+        "description": "Un universo holístico de astrología, tarot y energía femenina con mucho glam.",
+        "client": "COSMODIVAS 369",
+        "year": "2024",
+        "services": [
+          "Branding",
+          "Packaging",
+          "Dirección de Arte"
+        ],
+        "image": "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp",
+        "images": [
+          "/mockups/COSMODIVAS/Business-Card-Mockup-vol-29.webp",
+          "/mockups/COSMODIVAS/cartas.webp"
+        ],
+        "logos": [
+          "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/COSMODIVAS/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Adonde y que ®",
+        "cardTitle": "ADONDE Y QUE ®",
+        "description": "Blog de viajes + marketing turístico con alma nómade.",
+        "client": "Adonde y que ®",
+        "year": "2024",
+        "services": [
+          "Branding completo"
+        ],
+        "image": "/mockups/ADONDEYQUE/AGENDA_.webp",
+        "images": [
+          "/mockups/ADONDEYQUE/piluso.webp",
+          "/mockups/ADONDEYQUE/Stickers on macbook.webp",
+          "/mockups/ADONDEYQUE/Linen_Backpack_Mockup_1.webp",
+          "/mockups/ADONDEYQUE/AGENDA_.webp"
+        ],
+        "logos": [
+          "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/ADONDEYQUE/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "9",
+        "title": "MALVA café",
+        "cardTitle": "MALVA",
+        "description": "Café en Palermo con aroma a hogar y estética que abraza.",
+        "client": "MALVA café",
+        "year": "2024",
+        "services": [
+          "Branding",
+          "Estrategia para Redes",
+          "Diseño de vidriera"
+        ],
+        "image": "/mockups/MALVA café/FRENTE_CAFETERIA.webp",
+        "images": [
+          "/mockups/MALVA café/coffee holder.webp",
+          "/mockups/MALVA café/REMERA.webp",
+          "/mockups/MALVA café/Mesa de trabajo 7_1@3x.webp",
+          "/mockups/MALVA café/Mesa de trabajo 5@3x.webp",
+          "/mockups/MALVA café/Mesa de trabajo 3@3x.webp",
+          "/mockups/MALVA café/FRENTE_CAFETERIA.webp"
+        ],
+        "logos": [
+          "/mockups/MALVA café/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/MALVA café/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/MALVA café/LOGOs/Mesa de trabajo 3@3x.webp",
+          "/mockups/MALVA café/LOGOs/Mesa de trabajo 4@3x.webp"
+        ]
+      },
+      {
+        "id": "10",
+        "title": "WE TRAVEL",
+        "cardTitle": "WE TRAVEL",
+        "description": "Agencia de viajes pensada para jóvenes que quieren recorrer el mundo sin vueltas.",
+        "client": "WE TRAVEL",
+        "year": "2024",
+        "services": [
+          "Identidad visual"
+        ],
+        "image": "/mockups/WE TRAVEL/papeleria_.webp",
+        "images": [
+          "/mockups/WE TRAVEL/set_stickers.webp",
+          "/mockups/WE TRAVEL/papeleria_.webp",
+          "/mockups/WE TRAVEL/cartel_calle.webp",
+          "/mockups/WE TRAVEL/Mesa de trabajo 8proyecto.webp"
+        ],
+        "logos": [
+          "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 1@3x.webp",
+          "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 2@3x.webp",
+          "/mockups/WE TRAVEL/LOGOs/Mesa de trabajo 3@3x.webp"
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "title": "Inicio",
+      "slug": "",
+      "seoDescription": "",
+      "blocks": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "title": "Belen Warcok",
+          "subtitle": "CREANDO MARCAS CON PROPÓSITO",
+          "rotatingWords": [
+            "BRANDING",
+            "DISEÑO",
+            "CREATIVIDAD"
+          ]
+        },
+        {
+          "id": "home-projects",
+          "type": "projectGrid",
+          "heading": "Trabajos destacados",
+          "layout": "featured",
+          "projects": [
+            "4",
+            "2",
+            "3",
+            "8",
+            "5",
+            "6",
+            "7",
+            "1"
+          ],
+          "limit": 4,
+          "linkLabel": "Ver todos los proyectos",
+          "linkHref": "/work"
+        },
+        {
+          "id": "home-banner",
+          "type": "textBanner",
+          "text": "Estudio de diseño creativo especializado en branding e identidad visual"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Trabajos",
+      "slug": "work",
+      "seoDescription": "",
+      "blocks": [
+        {
+          "id": "work-projects",
+          "type": "projectGrid",
+          "heading": "Últimos proyectos",
+          "layout": "grid",
+          "projects": [],
+          "limit": 0,
+          "linkLabel": "",
+          "linkHref": ""
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "title": "Sobre mí",
+      "slug": "about",
+      "seoDescription": "",
+      "blocks": [
+        {
+          "id": "about-title",
+          "type": "pageTitle",
+          "title": "Sobre mi"
+        },
+        {
+          "id": "about-profile",
+          "type": "profile",
+          "image": "/about-me.jpeg",
+          "name": "Belen Warcok",
+          "role": "Founder & Creative Director"
+        },
+        {
+          "id": "about-text",
+          "type": "richText",
+          "text": "Soy diseñadora gráfica especializada en branding e identidad visual. Me encanta crear marcas con personalidad, que se vean bien y comuniquen mejor. Ayudo a emprendedores y negocios a encontrar su voz visual y construir una identidad que los represente de forma auténtica, coherente y con mucha onda. Trabajo combinando estética, concepto y funcionalidad para crear universos visuales que conectan de verdad y dejan huella."
+        },
+        {
+          "id": "about-services",
+          "type": "services",
+          "heading": "Servicios",
+          "groups": [
+            {
+              "title": "Branding",
+              "items": [
+                "Identidad visual",
+                "Estrategia de marca",
+                "Naming",
+                "Guías de estilo"
+              ]
+            },
+            {
+              "title": "Diseño",
+              "items": [
+                "Packaging",
+                "Dirección de arte",
+                "Diseño web"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "about-cta",
+          "type": "cta",
+          "heading": "Contacto",
+          "text": "Tenes algún proyecto en mente?",
+          "linkLabel": "Envíanos un mensaje",
+          "linkHref": "/contact"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contacto",
+      "slug": "contact",
+      "seoDescription": "",
+      "blocks": [
+        {
+          "id": "contact-title",
+          "type": "pageTitle",
+          "title": "Contacto"
+        },
+        {
+          "id": "contact-main",
+          "type": "contact",
+          "infoHeading": "Información de contacto",
+          "email": "belenwarcok@gmail.com",
+          "showSocials": true,
+          "formHeading": "Envíanos un mensaje",
+          "submitLabel": "Enviar mensaje",
+          "successTitle": "Mensaje enviado",
+          "successText": "Gracias por contactarnos. Te responderemos lo antes posible."
+        }
+      ]
+    }
+  ]
+}
