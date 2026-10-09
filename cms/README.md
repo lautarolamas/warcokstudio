@@ -21,7 +21,8 @@ La vista previa carga el sitio real en un iframe (`/cms-preview/...`) y le manda
 
 | Variable | Para qué |
 | --- | --- |
-| `CMS_PASSWORD` | Contraseña del panel. Sin ella, el panel solo queda abierto en desarrollo. |
+| `CMS_USER` | Usuario del panel. Por defecto `admin` (definido en `cms/core/auth.ts`). |
+| `CMS_PASSWORD` | Contraseña del panel. Por defecto la definida en `cms/core/auth.ts`. |
 | `CMS_SECRET` | Opcional. Clave para firmar la sesión (por defecto usa la contraseña). |
 | `CMS_GITHUB_REPO` | `usuario/repo`. Junto con el token, guarda cada cambio como commit. |
 | `CMS_GITHUB_TOKEN` | Token de GitHub con permiso de escritura de contenidos sobre ese repo. |

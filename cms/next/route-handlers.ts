@@ -9,7 +9,7 @@ import {
 } from "../core/storage";
 import {
   SESSION_COOKIE,
-  checkPassword,
+  checkCredentials,
   createSession,
   verifySession,
 } from "../core/auth";
@@ -81,9 +81,13 @@ export function createCmsRouteHandlers(config: CmsConfig) {
     const [action] = (await params).cms;
 
     if (action === "login") {
-      const { password } = await request.json().catch(() => ({}));
-      if (typeof password !== "string" || !(await checkPassword(password))) {
-        return error("Contraseña incorrecta", 401);
+      const { username, password } = await request.json().catch(() => ({}));
+      if (
+        typeof username !== "string" ||
+        typeof password !== "string" ||
+        !(await checkCredentials(username, password))
+      ) {
+        return error("Usuario o contraseña incorrectos", 401);
       }
       const session = await createSession();
       const response = NextResponse.json({ ok: true });

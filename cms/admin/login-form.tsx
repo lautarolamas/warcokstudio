@@ -5,6 +5,7 @@ import { Loader2 } from "lucide-react";
 import { Button, inputClass } from "./ui";
 
 export function LoginForm({ siteName }: { siteName: string }) {
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ export function LoginForm({ siteName }: { siteName: string }) {
     const res = await fetch("/api/cms/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ username, password }),
     }).catch(() => null);
     if (res?.ok) {
       window.location.href = "/admin";
@@ -38,15 +39,23 @@ export function LoginForm({ siteName }: { siteName: string }) {
           <h1 className="text-lg font-semibold">{siteName}</h1>
         </div>
         <input
-          type="password"
           autoFocus
+          autoComplete="username"
+          className={inputClass}
+          placeholder="Usuario"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          autoComplete="current-password"
           className={inputClass}
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         {error && <p className="text-sm text-red-600">{error}</p>}
-        <Button type="submit" variant="primary" className="w-full" disabled={loading || !password}>
+        <Button type="submit" variant="primary" className="w-full" disabled={loading || !username || !password}>
           {loading && <Loader2 className="h-4 w-4 animate-spin" />}
           Entrar
         </Button>

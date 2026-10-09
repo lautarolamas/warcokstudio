@@ -4,13 +4,20 @@
 export const SESSION_COOKIE = "cms_session";
 const SESSION_DAYS = 14;
 
-function secret() {
-  return process.env.CMS_SECRET || process.env.CMS_PASSWORD || "";
+// Credenciales por defecto del panel. Las variables de entorno CMS_USER y
+// CMS_PASSWORD las reemplazan.
+const DEFAULT_USER = "admin";
+const DEFAULT_PASSWORD = "esther1928";
+
+function credentials() {
+  return {
+    user: process.env.CMS_USER || DEFAULT_USER,
+    password: process.env.CMS_PASSWORD || DEFAULT_PASSWORD,
+  };
 }
 
-// Sin contraseña configurada el panel queda abierto solo en desarrollo.
-export function authDisabled() {
-  return !process.env.CMS_PASSWORD && process.env.NODE_ENV !== "production";
+function secret() {
+  return process.env.CMS_SECRET || credentials().password;
 }
 
 async function sign(value: string) {
@@ -47,16 +54,18 @@ export async function createSession() {
 }
 
 export async function verifySession(token: string | undefined) {
-  if (authDisabled()) return true;
-  if (!token || !secret()) return false;
+  if (!token) return false;
   const [expires, signature] = token.split(".");
   if (!expires || !signature || Number(expires) < Date.now()) return false;
   return safeEqual(signature, await sign(expires));
 }
 
-export async function checkPassword(password: string) {
-  const expected = process.env.CMS_PASSWORD;
-  if (!expected) return authDisabled();
-  // Compara firmas para no filtrar el largo de la contraseña.
-  return safeEqual(await sign(password), await sign(expected));
+export async function checkCredentials(user: string, password: string) {
+  const expected = credentials();
+  // Compara firmas para no filtrar el largo de los valores.
+  const [userOk, passwordOk] = await Promise.all([
+    sign(user).then(async (a) => safeEqual(a, await sign(expected.user))),
+    sign(password).then(async (a) => safeEqual(a, await sign(expected.password))),
+  ]);
+  return userOk && passwordOk;
 }
