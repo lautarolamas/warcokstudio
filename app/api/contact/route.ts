@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
     // Verificar que la API key existe
@@ -13,6 +11,8 @@ export async function POST(request: Request) {
       );
     }
 
+    // Se crea acá y no al cargar el módulo: sin la key, el build fallaba.
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
 
     const {

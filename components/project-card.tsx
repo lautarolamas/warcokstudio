@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface ProjectCardProps {
-  id: number;
+  id: string | number;
   title: string;
   image: string;
   index: number;
